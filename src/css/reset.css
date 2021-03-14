@@ -102,3 +102,7 @@ button {
     background-color: transparent;
     cursor: pointer;
   }
+
+button:active, button:focus {
+    outline: none !important;
+  }
