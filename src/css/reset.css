@@ -94,6 +94,10 @@ input, select {
     vertical-align:middle;
 }
 
+input[type="radio" i] {
+    margin: 0;
+}
+
 button {
     padding: 0;
     border: none;

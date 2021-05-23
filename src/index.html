@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио | Главная</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
@@ -13,40 +14,103 @@
 <body>
     <header class="header">
         <nav class='container nav'>
-            <img src="img/logo_dark.png" class='logo' alt="logo">
-            <div class="menu">
-                <button type="button" class="menu_btn">Главная</button>
-                <button type="button" class="menu_btn">Об авторе</button>
-                <button type="button" class="menu_btn">Процесс</button>
-                <button type="button" class="menu_btn">Работы</button>
-                <button type="button" class="menu_btn">Контакты</button>
+            <img src="img/logo_dark.png" class='nav__logo' alt="logo">
+            <div class="nav__menu">
+                <button type="button" class="nav__menu-btn">Главная</button>
+                <button type="button" class="nav__menu-btn">Об авторе</button>
+                <button type="button" class="nav__menu-btn">Процесс</button>
+                <button type="button" class="nav__menu-btn">Работы</button>
+                <button type="button" class="nav__menu-btn">Контакты</button>
             </div>
-            <div class="settings">
-                <button class="color_mode">
+            <div class="nav__settings">
+                <button class="nav__settings-color">
                     <span>Тёмная тема</span>
                 </button>
-                <button class="scrolling_mode">
+                <button class="nav__settings-scrolling">
                     <span>Режим презентации</span>
                 </button>
             </div>
         </nav>
     </header>
     <main>
-        <section class="section main_screen">
-            <div class="container"></div>
+        <section class="section main-screen">
+            <div class="container main-screen__container">
+                <div>
+                    <img src="img/notebook.png" alt="notebook" class="main-screen__img">
+                    <div class="main-screen__technologies">
+                        <img src="html.png" alt="html logo" class="main-screen__technologies__item">
+                        <img src="css.png" alt="css logo" class="main-screen__technologies__item">
+                        <img src="js.png" alt="JavaScript logo" class="main-screen__technologies__item">
+                    </div>
+                </div>
+                <div class="main-screen__content">
+                    <h1 class="main-screen__header">Вёрстка и программирование</h1>
+                    <p class="main-screen__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                    </p>
+                    <button class="main-screen__btn">Написать мне</button>
+                </div>
+            </div>
         </section>
         <section class="section about">
-            <div class="container"></div>
+            <div class="container about__container">
+                <div class="about__content">
+                    <h2 class="about__title">Обо мне</h2>
+                    <p class="about__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+                </div>
+                <img src="img/my_photo.jpg" alt="my photo" class="about__img">
+            </div>
         </section>
         <section class="section process">
-            <div class="container"></div>
+            <div class="container">
+                <h2 class="process__title">Как создаётся сайт</h2>
+                <p class="process__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+                <video src="" class="process__video" width="1110" height="600" controls="controls" poster="video/process.jpg">
+                        <source src="video/process.ogv" type='video/ogg; codecs="theora, vorbis"'>
+                        <source src="video/process.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        <source src="video/process.webm" type='video/webm; codecs="vp8, vorbis"'>
+                </video>
+            </div>
         </section>
         <section class="section portfolio">
-            <div class="container"></div>
+            <div class="portfolio__item js-portfolio__item"></div>
+            <div class="portfolio__item js-portfolio__item"></div>
+            <div class="portfolio__item js-portfolio__item"></div>
+            <div class="portfolio__item js-portfolio__item"></div>
+        </section>
+        <section class="section contacts">
+            <div class="container">
+                <h2 class="contacts__title">Хотите сайт?</h2>
+                <p class="contacts__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+                <form action="#" class="contacts__form">
+                    <legend>Как Вас зовут?</legend>
+                    <input type="text" name="name" placeholder="Имя">
+                    <legend>Как с вами связаться?</legend>
+                    <div class="contacts__form__user-contacts">
+                        <fieldset>
+                            <label><input type="radio" name="communication" value="написать" checked>Написать на почту</label>
+                            <label><input type="radio" name="communication" value="позвонить">Позвонить</label>
+                        </fieldset>
+                        <fieldset>
+                            <input type="email" name="email" placeholder="Адрес почты" required>
+                            <input type="tel" name="tel" placeholder="Номер телефона" class="hidden">
+                        </fieldset>
+                    </div>
+                    <legend>Ваше сообщение:</legend>
+                    <textarea name="message" rows="10"></textarea>
+                    <button class="contacts__form__button" type="submit" name="submit">отправить</button>
+                </form>
+            </div>
         </section>
     </main>
     <footer class="footer">
-        <div class="container"></div>
+        <div class="container footer__container">
+            <a href="mailto:alexanderwh99@gmail.com" class="footer__email"  target="_blank">alexanderwh99@gmail.com</a>
+            <div class="footer__social">
+                <a href="" class="footer__social__item telegram"  target="_blank"></a>
+                <a href="" class="footer__social__item whatsapp"  target="_blank"></a>
+                <a href="" class="footer__social__item instagram"  target="_blank"></a>
+            </div>
+        </div>
     </footer>
    
 </body>

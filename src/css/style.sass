@@ -1,14 +1,42 @@
-$text_color_light: rgb(0, 0, 0)
+$text_color_light: rgb(50, 50, 50)
 
 $text_color_dark: rgb(255, 255, 255)
+
+$bg_color_light_1: rgb(249, 249, 249)
+
+$bg_color_light_2: rgb(238, 239, 241)
+
+$primary_color: rgb(52, 84, 122)
 
 @mixin title() 
     font-family: 'Roboto', sans-serif
     font-weight: 500
+    font-size: 3rem
+    line-height: 1.64em
+
+@mixin subtitle() 
+    font-family: 'Roboto', sans-serif
+    font-weight: 500
+    font-size: 2rem
+    line-height: 1.17em
 
 @mixin text() 
     font-family: 'Roboto', sans-serif
     font-weight: 400
+    font-size: 1rem
+    line-height: 1.64em
+
+@mixin button()
+    font-family: 'Roboto', sans-serif
+    font-weight: 400
+    font-size: 1rem
+    line-height: 1.62em
+    text-transform: uppercase
+    color: $text_color_dark
+    text-align: center
+    padding: 23px 41px
+    background-color: $primary_color
+    border-radius: 5px
 
 @mixin flexible()
     display: flex 
@@ -23,23 +51,27 @@ html
     margin: 0 auto
     padding: 0 20px
 
+.header
+    background-color: $bg_color_light_2
+    padding-top: 80px 
+
 .nav
     @include flexible()
     @include text()
     justify-content: space-between
-    .logo
+    .nav__logo
         width: 15%
-    .menu
+    .nav__menu
         @include flexible()
         justify-content: space-around
         width: 50%
-        .menu_btn
+        .nav__menu-btn
             text-transform: uppercase
             font-size: 1rem
             line-height: 1.5em
             letter-spacing: 0.1em
-    .settings 
-        .color_mode, .scrolling_mode
+    .nav__settings 
+        .nav__settings-color, .nav__settings-scrolling
             position: relative
             font-size: 0.8rem
             width: 200px
@@ -47,9 +79,7 @@ html
             border: 2px solid $text_color_light
             border-radius: 20px
             height: 2.5em
-            line-height: 2.5em
             text-align: right
-            overflow: hidden
             &::before
                 content: ''
                 position: absolute
@@ -64,18 +94,178 @@ html
                 display: inline-block
                 text-align: center
                 width: 80%
-        .color_mode
+        .nav__settings-color
                 margin-top: 0.5em 
                 margin-bottom: 1em
-        .scrolling_mode
+        .nav__settings-scrolling
                 margin-bottom: 0.5em
 
+.main-screen
+    background-color: $bg_color_light_2
+    padding: 160px 245px 145px
+    &__container
+        @include flexible()
+        justify-content: space-between
+    &__img
+        width: 357px
+    &__technologies
+        @include flexible()
+        margin-top: 50px
+        justify-content: space-around
+        width: 100%
+    &__content
+        width: 685px
+    &__header
+        @include title()
+    &__text
+        @include text()
+        margin: 60px 0
+    &__btn
+        @include button()
+        
+.about
+    background-color: $bg_color_light_1
+    padding: 120px 245px 100px
+    &__container
+        @include flexible()
+        justify-content: space-between
+    &__title
+        @include subtitle()
+        text-align: left
+    &__text
+        @include text()
+        width: 540px
+        margin-top: 50px
+    &__img
+        width: 555px
 
+.process
+    text-align: center  
+    background-color: $bg_color_light_2
+    padding: 100px 0
+    &__title
+        @include subtitle()
+    &__text
+        @include text()
+        margin: 50px 0 57px
+
+.portfolio
+    @include flexible()
+    &__item
+        position: relative
+        width: 25vw
+        height: 25vw
+    &__item::after
+        content: ''
+        display: block
+        position: absolute
+        width: 100%
+        height: 0%
+        bottom: 0
+        left: 0
+        background: rgba(52, 84, 122, 0.5)
+        background: linear-gradient(to top, rgba(52, 84, 122, 0.8), rgba(52, 84, 122, 0.01))
+        transition: height .6s
+    &__item:hover
+        &::after
+            height: 60%
+            transition: height .6s
+
+.contacts
+    background-color: $bg_color_light_1
+    padding: 100px 0
+    text-align: center
+    &__title
+        @include subtitle()
+    &__text
+        @include text()
+        width: 540px
+        margin: 50px auto 65px
+    &__form
+        width: 540px
+        margin: 0 auto
+        &__user-contacts
+            @include flexible()
+            justify-content: space-between
+            margin: 20px auto
+            width: 90%
+            fieldset
+                display: inline-block
+                width: 45%
+                >input:not([type=radio])
+                    width: 100%
+                label
+                    display: inline-block
+                    width: 100%
+                    text-align: left
+                    input[type=radio]
+                        margin-right: 10px
+                label:first-child
+                    margin-bottom: 10px 
+
+        legend
+            width: 90%
+            text-align: left
+            margin: 0 auto 15px
+            font-family: 'Roboto', sans-serif
+            font-weight: 500
+            font-size: 1rem
+        legend:not(:first-child)
+            margin: 20px auto 15px
+        input:not([type=radio]), textarea
+            padding: 10px 5px
+            display: inline-block
+            box-sizing: border-box
+            width: 90%
+            border-radius: 5px
+        input:focus, textarea:focus
+            outline: none 
+            border: solid 2px $primary_color
+        &__button
+            @include button()
+            margin-top: 30px
+            width: 90%
+
+.footer
+    padding: 50px 0
+    background-color: $primary_color
+    &__container
+        @include flexible()
+        justify-content: space-around
+    &__social
+        @include flexible()
+        &__item
+            width: 50px
+            height: 50px
+            background-repeat: no-repeat
+            &.telegram
+                background-image: url('../img/telegram_black.png')
+                background-size: 93% 93%
+                background-position: center bottom
+            &.whatsapp
+                background-image: url('../img/whatsapp_black.png')
+                background-size: 100% 100%
+                background-position: center center
+            &.instagram
+                background-image: url('../img/instagram_black.png')
+                background-size: 90% 90%
+                background-position: left center
+        &__item:not(:first-child)
+            margin-left: 20px 
+    a
+        @include text()
+        color: rgb(0, 0, 0)
+        
+
+.hidden
+    display: none !important
 
 /*Тёмная тема*/
-.dark_mode
-    .logo
-        filter: invert(100%)
+.color-mode--dark
+
+/*Режим презентации*/
+.scrolling-mode--slider
+
 
     
 
