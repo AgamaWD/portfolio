@@ -74,7 +74,7 @@ html
         .nav__settings-color, .nav__settings-scrolling
             position: relative
             font-size: 0.8rem
-            width: 200px
+            width: 150px
             display: block
             border: 2px solid $text_color_light
             border-radius: 20px
@@ -86,7 +86,7 @@ html
                 left: 0
                 top: 0
                 display: block
-                width: 18%
+                width: 23%
                 height: 100%
                 background-color: $text_color_light
                 border-radius: 20px
@@ -120,11 +120,15 @@ html
     &__text
         @include text()
         margin: 60px 0
-    &__btn
-        @include button()
         
 .about
+    position: relative
+    overflow: hidden
     background-color: $bg_color_light_1
+    background-image: url(../img/my_photo.png), linear-gradient(270deg, rgb(193, 193, 193), rgb(175, 175, 175) 49%, rgb(249, 249, 249) 85%)
+    background-size: auto 150%, 50% 100%
+    background-repeat: no-repeat
+    background-position: 80% 50%, right
     padding: 120px 245px 100px
     &__container
         @include flexible()
@@ -135,9 +139,15 @@ html
     &__text
         @include text()
         width: 540px
-        margin-top: 50px
+        margin: 50px 0
+    &__btn
+        @include button()
     &__img
-        width: 555px
+        display: none
+        position: absolute
+        height: 150%
+        bottom: -25%
+        left: 50%
 
 .process
     text-align: center  
@@ -238,6 +248,10 @@ html
             width: 50px
             height: 50px
             background-repeat: no-repeat
+            &.github
+                background-image: url('../img/github_black.png')
+                background-size: 95% 95%
+                background-position: center bottom
             &.telegram
                 background-image: url('../img/telegram_black.png')
                 background-size: 93% 93%
