@@ -48,12 +48,12 @@ function createProject() {
         let background = projects[i].background
         let htmlLayout = `<div class="portfolio__item--hover">
                             <div>
-                                <h4 class="portfolio__item__title">${title}</h4>
-                                <p class="portfolio__item__description">${description}</p>
+                                <h4 class="item__title">${title}</h4>
+                                <p class="item__description">${description}</p>
                             </div>
                             <div>
-                                <a href="${projectlink}" target='_blank' class="portfolio__item__link">Открыть сайт</a>
-                                <a href="${githubLink}" target='_blank' class="portfolio__item__link">Открыть на GitHub</a>
+                                <a href="${projectlink}" target='_blank' class="item__link">Открыть сайт</a>
+                                <a href="${githubLink}" target='_blank' class="item__link">Открыть на GitHub</a>
                             </div>
                         </div>`
         let portfolioItem = document.createElement('div')
@@ -70,7 +70,7 @@ function createProject() {
             portfolioItem.style = `width: 25%; height: calc(25vw/2); background-image: url(${background});`
         }
 
-        portfolioItem.classList.add('portfolio__item')
+        portfolioItem.classList.add('portfolio__item', 'item')
         portfolioItem.innerHTML = htmlLayout
         projectContainer.appendChild(portfolioItem)
     };

@@ -131,7 +131,7 @@ a:hover {
   width: 357px;
 }
 
-.main-screen__technologies {
+.main-screen .technologies {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,7 +145,7 @@ a:hover {
   width: 100%;
 }
 
-.main-screen__technologies__item:not(:last-child) {
+.main-screen .technologies__item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -192,7 +192,7 @@ a:hover {
           justify-content: space-between;
 }
 
-.about__title {
+.about-content__title {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 2rem;
@@ -200,7 +200,7 @@ a:hover {
   text-align: left;
 }
 
-.about__text {
+.about-content__text {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -209,7 +209,7 @@ a:hover {
   margin: 50px 0;
 }
 
-.about__btn {
+.about-content__btn {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -271,7 +271,7 @@ a:hover {
   color: white;
 }
 
-.portfolio__item__title {
+.portfolio .item__title {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 1.3rem;
@@ -279,14 +279,14 @@ a:hover {
   margin: 20px 0;
 }
 
-.portfolio__item__description {
+.portfolio .item__description {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.64em;
 }
 
-.portfolio__item__link:first-child {
+.portfolio .item__link:first-child {
   margin-right: 50px;
 }
 
@@ -352,7 +352,7 @@ a:hover {
   margin: 0 auto;
 }
 
-.contacts__form__user-contacts {
+.contacts .form__user-contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -366,30 +366,30 @@ a:hover {
   width: 90%;
 }
 
-.contacts__form__user-contacts fieldset {
+.contacts .form__user-contacts fieldset {
   display: inline-block;
   width: 45%;
 }
 
-.contacts__form__user-contacts fieldset > input:not([type=radio]) {
+.contacts .form__user-contacts fieldset > input:not([type=radio]) {
   width: 100%;
 }
 
-.contacts__form__user-contacts fieldset label {
+.contacts .form__user-contacts fieldset label {
   display: inline-block;
   width: 100%;
   text-align: left;
 }
 
-.contacts__form__user-contacts fieldset label input[type=radio] {
+.contacts .form__user-contacts fieldset label input[type=radio] {
   margin-right: 10px;
 }
 
-.contacts__form__user-contacts fieldset label:first-child {
+.contacts .form__user-contacts fieldset label:first-child {
   margin-bottom: 10px;
 }
 
-.contacts__form legend {
+.contacts .form legend {
   width: 90%;
   text-align: left;
   margin: 0 auto 15px;
@@ -398,11 +398,11 @@ a:hover {
   font-size: 1rem;
 }
 
-.contacts__form legend:not(:first-child) {
+.contacts .form legend:not(:first-child) {
   margin: 20px auto 15px;
 }
 
-.contacts__form input:not([type=radio]), .contacts__form textarea {
+.contacts .form input:not([type=radio]), .contacts .form textarea {
   padding: 10px 5px;
   display: inline-block;
   -webkit-box-sizing: border-box;
@@ -411,12 +411,12 @@ a:hover {
   border-radius: 5px;
 }
 
-.contacts__form input:focus, .contacts__form textarea:focus {
+.contacts .form input:focus, .contacts .form textarea:focus {
   outline: none;
   border: solid 2px #34547a;
 }
 
-.contacts__form__button {
+.contacts .form__button {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -456,37 +456,37 @@ a:hover {
           align-items: center;
 }
 
-.footer__social__item {
+.footer .social__item {
   width: 50px;
   height: 50px;
   background-repeat: no-repeat;
 }
 
-.footer__social__item.github {
+.footer .social__item.github {
   background-image: url("../img/github_black.png");
   background-size: 95% 95%;
   background-position: center bottom;
 }
 
-.footer__social__item.telegram {
+.footer .social__item.telegram {
   background-image: url("../img/telegram_black.png");
   background-size: 93% 93%;
   background-position: center bottom;
 }
 
-.footer__social__item.whatsapp {
+.footer .social__item.whatsapp {
   background-image: url("../img/whatsapp_black.png");
   background-size: 100% 100%;
   background-position: center center;
 }
 
-.footer__social__item.instagram {
+.footer .social__item.instagram {
   background-image: url("../img/instagram_black.png");
   background-size: 90% 90%;
   background-position: left center;
 }
 
-.footer__social__item:not(:first-child) {
+.footer .social__item:not(:first-child) {
   margin-left: 20px;
 }
 
