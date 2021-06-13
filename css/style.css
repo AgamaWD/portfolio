@@ -26,6 +26,15 @@ a:hover {
 .header {
   background-color: #eeeff1;
   padding-top: 80px;
+  width: 100%;
+}
+
+.header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 0;
+  z-index: 800;
 }
 
 .nav {
@@ -128,7 +137,7 @@ a:hover {
 }
 
 .main-screen__img {
-  width: 357px;
+  width: 457px;
 }
 
 .main-screen .technologies {
@@ -212,12 +221,12 @@ a:hover {
 .about-content__btn {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.62em;
+  font-size: 0.9rem;
+  line-height: 1.42em;
   text-transform: uppercase;
   color: white;
   text-align: center;
-  padding: 23px 41px;
+  padding: 15px 30px;
   background-color: #34547a;
   border-radius: 5px;
 }
@@ -419,12 +428,12 @@ a:hover {
 .contacts .form__button {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.62em;
+  font-size: 0.9rem;
+  line-height: 1.42em;
   text-transform: uppercase;
   color: white;
   text-align: center;
-  padding: 23px 41px;
+  padding: 15px 30px;
   background-color: #34547a;
   border-radius: 5px;
   margin-top: 30px;

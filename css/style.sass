@@ -30,12 +30,12 @@ $primary_color: rgb(52, 84, 122)
 @mixin button()
     font-family: 'Roboto', sans-serif
     font-weight: 400
-    font-size: 1rem
-    line-height: 1.62em
+    font-size: 0.9rem
+    line-height: 1.42em
     text-transform: uppercase
     color: $text_color_dark
     text-align: center
-    padding: 23px 41px
+    padding: 15px 30px
     background-color: $primary_color
     border-radius: 5px
 
@@ -61,7 +61,14 @@ a
 
 .header
     background-color: $bg_color_light_2
-    padding-top: 80px 
+    padding-top: 80px
+    width: 100%
+    &.fixed
+        position: fixed
+        top: 0
+        left: 0
+        padding-top: 0
+        z-index: 800
 
 .nav
     @include flexible()
@@ -118,7 +125,7 @@ a
         @include flexible()
         justify-content: space-between
     &__img
-        width: 357px
+        width: 457px
     .technologies
         @include flexible()
         margin-top: 50px
