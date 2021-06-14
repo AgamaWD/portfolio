@@ -18,20 +18,38 @@ function fixationMenu () {
             header.classList.remove('fixed');
             mainScreen.style = 'padding: 160px 245px 145px;'
         }
-        console.log(currentOfset)
-
     });
 };
 fixationMenu();
 
 /*Прокрутка по странице*/
 
-function scrollFn(elemId) {
-    const elem = document.getElementById(elemId);
-    const elemPos = elem.getBoundingClientRect().top + pageYOffset - 90;
+function scrollFn(e) {
+    e.preventDefault();
 
-    window.scrollTo({
-        'top' : `${elemPos}`,
-        'behavior' : 'smooth'
-    });
+    const elemHref = e.target.getAttribute('href');
+
+    if(!elemHref.length || elemHref.indexOf('#') != 0) {
+        console.log(`Неправильная ссылка.`)
+        return
+    };
+
+    if(elemHref.length == 1 && elemHref == '#') {
+        scrollTo({'top': 0, 'behavior': 'smooth'});
+    } else if (elemHref.length > 1) {
+        const elemId = elemHref.substring(1);
+        const elem = document.getElementById(`${elemId}`);
+
+        if (!elem) {
+            console.log(`Объект по якорю ${elemId} не найден.`)
+            return
+        }
+
+        const elemPos = elem.getBoundingClientRect().top + pageYOffset - 90;
+    
+        window.scrollTo({
+            'top' : `${elemPos}`,
+            'behavior' : 'smooth'
+        });
+    }
 };

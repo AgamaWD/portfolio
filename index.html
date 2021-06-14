@@ -22,11 +22,11 @@
         <nav class='container nav'>
             <img src="img/logo_dark.png" class='nav__logo' alt="logo">
             <div class="nav__menu">
-                <button type="button" class="nav__menu-btn" onclick="window.scrollTo({'top': 0, 'behavior': 'smooth'})">Главная</button>
-                <button type="button" class="nav__menu-btn"onclick="scrollFn('about')">Обо мне</button>
-                <button type="button" class="nav__menu-btn" onclick="scrollFn('process')">Процесс</button>
-                <button type="button" class="nav__menu-btn" onclick="scrollFn('js-portfolio')">Работы</button>
-                <button type="button" class="nav__menu-btn" onclick="scrollFn('footer')">Контакты</button>
+                <a href='#' class="nav__menu-btn" onclick="scrollFn(event)">Главная</a>
+                <a href='#about' class="nav__menu-btn" onclick="scrollFn(event)">Обо мне</a>
+                <a href='#process' class="nav__menu-btn" onclick="scrollFn(event)">Процесс</a>
+                <a href='#js-portfolio' class="nav__menu-btn" onclick="scrollFn(event)">Работы</a>
+                <a href='#footer' class="nav__menu-btn no-link" onclick="scrollFn(event)">Контакты</a>
             </div>
             <div class="nav__settings">
                 <button type='button' class="nav__settings-color">
@@ -61,9 +61,9 @@
                 <div class="about-content">
                     <h2 class="about-content__title">Обо мне</h2>
                     <p class="about-content__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
-                    <button type='button' class="about-content__btn" onclick="scrollFn('js-portfolio')">Посмотреть работы</button>
-                    <button type='button' class="about-content__btn" onclick="window.open('https://krasnodar.hh.ru/resume/3a355e50ff07bf14170039ed1f747531776b72')">Посмотреть резюме</button>
-                    <button type='button' class="about-content__btn" onclick="scrollFn('form')">Написать мне</button>
+                    <a class="about-content__btn" href='#js-portfolio' onclick="scrollFn(event)">Посмотреть работы</a>
+                    <a href='https://krasnodar.hh.ru/resume/3a355e50ff07bf14170039ed1f747531776b72' class='about-content__btn' target='_blank'>Посмотреть резюме</a>
+                    <a class="about-content__btn" href='#form' onclick="scrollFn(event)">Написать мне</a>
                 </div>
                 <img src="img/my_photo.png" alt="my photo" class="about__img">
             </div>

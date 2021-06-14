@@ -219,6 +219,7 @@ a:hover {
 }
 
 .about-content__btn {
+  display: inline-block;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 0.9rem;
@@ -229,6 +230,7 @@ a:hover {
   padding: 15px 30px;
   background-color: #34547a;
   border-radius: 5px;
+  text-decoration: none !important;
 }
 
 .about__img {
@@ -426,6 +428,7 @@ a:hover {
 }
 
 .contacts .form__button {
+  display: inline-block;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 0.9rem;

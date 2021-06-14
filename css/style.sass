@@ -28,6 +28,7 @@ $primary_color: rgb(52, 84, 122)
     line-height: 1.64em
 
 @mixin button()
+    display: inline-block
     font-family: 'Roboto', sans-serif
     font-weight: 400
     font-size: 0.9rem
@@ -57,7 +58,7 @@ a
     text-decoration: none
     color: inherit
     &:hover
-        text-decoration: underline
+        text-decoration: underline  
 
 .header
     background-color: $bg_color_light_2
@@ -163,6 +164,7 @@ a
             margin: 50px 0
         &__btn
             @include button()
+            text-decoration: none !important
     &__img
         display: none
         position: absolute
