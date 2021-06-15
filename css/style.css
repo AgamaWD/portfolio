@@ -58,7 +58,13 @@ a:hover {
 }
 
 .nav .nav__logo {
-  width: 15%;
+  display: inline-block;
+  width: 281px;
+  height: 90px;
+  background-image: url(../img/logo_dark.png);
+  background-size: 100% 100%;
+  -webkit-transition: background-image 0.5s linear;
+  transition: background-image 0.5s linear;
 }
 
 .nav .nav__menu {
@@ -510,6 +516,10 @@ a:hover {
   transition: background-color 0.5s linear;
 }
 
+.footer-links a {
+  display: block;
+}
+
 .footer__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -540,24 +550,32 @@ a:hover {
   background-image: url("../img/github_black.png");
   background-size: 95% 95%;
   background-position: center bottom;
+  -webkit-transition: background-image 0.5s linear;
+  transition: background-image 0.5s linear;
 }
 
 .footer .social__item.telegram {
   background-image: url("../img/telegram_black.png");
   background-size: 93% 93%;
   background-position: center bottom;
+  -webkit-transition: background-image 0.5s linear;
+  transition: background-image 0.5s linear;
 }
 
 .footer .social__item.whatsapp {
   background-image: url("../img/whatsapp_black.png");
   background-size: 100% 100%;
   background-position: center center;
+  -webkit-transition: background-image 0.5s linear;
+  transition: background-image 0.5s linear;
 }
 
 .footer .social__item.instagram {
   background-image: url("../img/instagram_black.png");
   background-size: 90% 90%;
   background-position: left center;
+  -webkit-transition: background-image 0.5s linear;
+  transition: background-image 0.5s linear;
 }
 
 .footer .social__item:not(:first-child) {
@@ -586,6 +604,12 @@ a:hover {
   background-color: #252526;
   -webkit-transition: background-color 0.5s linear;
   transition: background-color 0.5s linear;
+}
+
+.dark .nav .nav__logo {
+  background-image: url(../img/logo_light.png);
+  -webkit-transition: background-image 0.5s linear;
+  transition: background-image 0.5s linear;
 }
 
 .dark .nav .nav__settings-color, .dark .nav .nav__settings-scrolling {
@@ -668,6 +692,30 @@ a:hover {
   background-color: #1e1e1e;
   -webkit-transition: background-color 0.5s linear;
   transition: background-color 0.5s linear;
+}
+
+.dark .footer .social__item.github {
+  background-image: url("../img/github_white.png");
+  -webkit-transition: background-image 0.5s linear;
+  transition: background-image 0.5s linear;
+}
+
+.dark .footer .social__item.telegram {
+  background-image: url("../img/telegram_white.png");
+  -webkit-transition: background-image 0.5s linear;
+  transition: background-image 0.5s linear;
+}
+
+.dark .footer .social__item.whatsapp {
+  background-image: url("../img/whatsapp_white.png");
+  -webkit-transition: background-image 0.5s linear;
+  transition: background-image 0.5s linear;
+}
+
+.dark .footer .social__item.instagram {
+  background-image: url("../img/instagram_white.png");
+  -webkit-transition: background-image 0.5s linear;
+  transition: background-image 0.5s linear;
 }
 
 /*Режим презентации*/

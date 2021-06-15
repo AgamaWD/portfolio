@@ -84,7 +84,12 @@ a
     @include text()
     justify-content: space-between
     .nav__logo
-        width: 15%
+        display: inline-block
+        width: 281px
+        height: 90px
+        background-image: url(../img/logo_dark.png)
+        background-size: 100% 100% 
+        transition: background-image $transition_delay linear
     .nav__menu
         @include flexible()
         justify-content: space-around
@@ -321,6 +326,9 @@ a
     padding: 50px 0
     background-color: $primary_color
     transition: background-color $transition_delay linear
+    &-links
+        a
+            display: block
     &__container
         @include flexible()
         justify-content: space-around
@@ -335,18 +343,22 @@ a
                 background-image: url('../img/github_black.png')
                 background-size: 95% 95%
                 background-position: center bottom
+                transition: background-image $transition_delay linear
             &.telegram
                 background-image: url('../img/telegram_black.png')
                 background-size: 93% 93%
                 background-position: center bottom
+                transition: background-image $transition_delay linear
             &.whatsapp
                 background-image: url('../img/whatsapp_black.png')
                 background-size: 100% 100%
                 background-position: center center
+                transition: background-image $transition_delay linear
             &.instagram
                 background-image: url('../img/instagram_black.png')
                 background-size: 90% 90%
                 background-position: left center
+                transition: background-image $transition_delay linear
         &__item:not(:first-child)
             margin-left: 20px 
     a
@@ -364,6 +376,9 @@ a
         background-color: $bg_color_dark_2
         transition: background-color $transition_delay linear
     .nav
+        .nav__logo
+            background-image: url(../img/logo_light.png)
+            transition: background-image $transition_delay linear
         .nav__settings-color, .nav__settings-scrolling
             border: 2px solid $text_color_light
             color: $text_color_light
@@ -412,6 +427,20 @@ a
     .footer
         background-color: $bg_color_dark_1
         transition: background-color $transition_delay linear
+        .social
+            &__item
+                &.github
+                    background-image: url('../img/github_white.png')
+                    transition: background-image $transition_delay linear
+                &.telegram
+                    background-image: url('../img/telegram_white.png')
+                    transition: background-image $transition_delay linear
+                &.whatsapp
+                    background-image: url('../img/whatsapp_white.png')
+                    transition: background-image $transition_delay linear
+                &.instagram
+                    background-image: url('../img/instagram_white.png')
+                    transition: background-image $transition_delay linear
 
 /*Режим презентации*/
 .scrolling-mode_slider

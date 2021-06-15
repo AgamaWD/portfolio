@@ -55,8 +55,26 @@ function scrollFn(e) {
 };
 
 /*Переключение темы*/
+function themeCheck() {
+    const currThemeLS = localStorage.getItem('theme')
+    const body = document.querySelector('body')
+
+    if (currThemeLS == null) {
+        return
+    } else if (currThemeLS == 'dark') {
+        body.classList.add('dark')
+    }
+}
+themeCheck()
 
 function themeToggle() {
     const body = document.querySelector('body')
+    const currentThemeLS = localStorage.getItem('theme')
+    if (currentThemeLS == null) {
+        localStorage.setItem('theme', 'dark')
+    } else if (currentThemeLS == 'dark') {
+        localStorage.removeItem('theme')
+    }
+    console.log(currentThemeLS)
     body.classList.toggle('dark')
 }
