@@ -17,6 +17,8 @@ a {
   line-height: 1.64em;
   text-decoration: none;
   color: inherit;
+  -webkit-transition: color 1s linear;
+  transition: color 1s linear;
 }
 
 a:hover {
@@ -27,6 +29,8 @@ a:hover {
   background-color: #eeeff1;
   padding-top: 80px;
   width: 100%;
+  -webkit-transition: background-color 0.5s linear;
+  transition: background-color 0.5s linear;
 }
 
 .header.fixed {
@@ -89,7 +93,8 @@ a:hover {
   border: 2px solid #323232;
   border-radius: 20px;
   height: 2.5em;
-  text-align: right;
+  -webkit-transition: border 0.5s linear, color 0.5s linear;
+  transition: border 0.5s linear, color 0.5s linear;
 }
 
 .nav .nav__settings .nav__settings-color::before, .nav .nav__settings .nav__settings-scrolling::before {
@@ -102,26 +107,64 @@ a:hover {
   height: 100%;
   background-color: #323232;
   border-radius: 20px;
+  -webkit-transition: background-color 0.5s linear;
+  transition: background-color 0.5s linear;
 }
 
 .nav .nav__settings .nav__settings-color span, .nav .nav__settings .nav__settings-scrolling span {
   display: inline-block;
   text-align: center;
-  width: 80%;
+  overflow: hidden;
 }
 
 .nav .nav__settings .nav__settings-color {
   margin-top: 0.5em;
   margin-bottom: 1em;
+  padding-left: 20%;
+  -webkit-transition: padding-left 0.5s linear;
+  transition: padding-left 0.5s linear;
+}
+
+.nav .nav__settings .nav__settings-color span:first-child {
+  width: 0%;
+  -webkit-transition: width 0.5s linear;
+  transition: width 0.5s linear;
+}
+
+.nav .nav__settings .nav__settings-color span:last-child {
+  width: 80%;
+  -webkit-transition: width 0.5s linear;
+  transition: width 0.5s linear;
+}
+
+.nav .nav__settings .nav__settings-color::before {
+  left: 0;
+  -webkit-transition: left 0.5s linear;
+  transition: left 0.5s linear;
 }
 
 .nav .nav__settings .nav__settings-scrolling {
   margin-bottom: 0.5em;
+  text-align: right;
+}
+
+.nav .nav__settings .nav__settings-scrolling span:first-child {
+  width: 0%;
+  -webkit-transition: width 0.5s linear;
+  transition: width 0.5s linear;
+}
+
+.nav .nav__settings .nav__settings-scrolling span:last-child {
+  width: 80%;
+  -webkit-transition: width 0.5s linear;
+  transition: width 0.5s linear;
 }
 
 .main-screen {
   background-color: #eeeff1;
   padding: 160px 245px 145px;
+  -webkit-transition: background-color 0.5s linear;
+  transition: background-color 0.5s linear;
 }
 
 .main-screen__container {
@@ -160,6 +203,9 @@ a:hover {
 
 .main-screen__content {
   width: 685px;
+  color: #323232;
+  -webkit-transition: color 0.5s linear;
+  transition: color 0.5s linear;
 }
 
 .main-screen__header {
@@ -187,6 +233,8 @@ a:hover {
   background-repeat: no-repeat;
   background-position: 80% 50%, right;
   padding: 120px 245px 100px;
+  -webkit-transition: background-color 0.5s linear;
+  transition: background-color 0.5s linear;
 }
 
 .about__container {
@@ -199,6 +247,12 @@ a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.about-content {
+  color: white;
+  -webkit-transition: color 0.5s linear;
+  transition: color 0.5s linear;
 }
 
 .about-content__title {
@@ -244,7 +298,10 @@ a:hover {
 .process {
   text-align: center;
   background-color: #eeeff1;
+  color: #323232;
   padding: 100px 0;
+  -webkit-transition: background-color 0.5s linear, color 0.5s linear;
+  transition: background-color 0.5s linear, color 0.5s linear;
 }
 
 .process__title {
@@ -340,6 +397,9 @@ a:hover {
   background-color: #f9f9f9;
   padding: 100px 0;
   text-align: center;
+  color: #323232;
+  -webkit-transition: background-color 0.5s linear, color 0.5s linear;
+  transition: background-color 0.5s linear, color 0.5s linear;
 }
 
 .contacts__title {
@@ -446,6 +506,8 @@ a:hover {
 .footer {
   padding: 50px 0;
   background-color: #34547a;
+  -webkit-transition: background-color 0.5s linear;
+  transition: background-color 0.5s linear;
 }
 
 .footer__container {
@@ -507,7 +569,6 @@ a:hover {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.64em;
-  color: black;
 }
 
 .hidden {
@@ -515,5 +576,99 @@ a:hover {
 }
 
 /*Тёмная тема*/
+.dark a {
+  color: white;
+  -webkit-transition: color 0.5s linear;
+  transition: color 0.5s linear;
+}
+
+.dark .header {
+  background-color: #252526;
+  -webkit-transition: background-color 0.5s linear;
+  transition: background-color 0.5s linear;
+}
+
+.dark .nav .nav__settings-color, .dark .nav .nav__settings-scrolling {
+  border: 2px solid white;
+  color: white;
+  -webkit-transition: border 0.5s linear, color 0.5s linear;
+  transition: border 0.5s linear, color 0.5s linear;
+}
+
+.dark .nav .nav__settings-color::before, .dark .nav .nav__settings-scrolling::before {
+  background-color: white;
+  -webkit-transition: background-color 0.5s linear;
+  transition: background-color 0.5s linear;
+}
+
+.dark .nav .nav__settings-color {
+  padding-left: 0;
+  -webkit-transition: padding-left 0.5s linear;
+  transition: padding-left 0.5s linear;
+}
+
+.dark .nav .nav__settings-color::before {
+  left: 78%;
+  -webkit-transition: left 0.5s linear;
+  transition: left 0.5s linear;
+}
+
+.dark .nav .nav__settings-color span:first-child {
+  width: 80%;
+  -webkit-transition: width 0.5s linear;
+  transition: width 0.5s linear;
+}
+
+.dark .nav .nav__settings-color span:last-child {
+  width: 0%;
+  -webkit-transition: width 0.5s linear;
+  transition: width 0.5s linear;
+}
+
+.dark .main-screen {
+  background-color: #252526;
+  -webkit-transition: background-color 0.5s linear;
+  transition: background-color 0.5s linear;
+}
+
+.dark .main-screen__content {
+  color: white;
+  -webkit-transition: color 0.5s linear;
+  transition: color 0.5s linear;
+}
+
+.dark .about {
+  background-color: #1e1e1e;
+  background-image: url(../img/my_photo.png);
+  -webkit-transition: background-color 0.5s linear;
+  transition: background-color 0.5s linear;
+}
+
+.dark .about-content {
+  color: white;
+  -webkit-transition: color 0.5s linear;
+  transition: color 0.5s linear;
+}
+
+.dark .process {
+  color: white;
+  background-color: #252526;
+  -webkit-transition: background-color 0.5s linear, color 0.5s linear;
+  transition: background-color 0.5s linear, color 0.5s linear;
+}
+
+.dark .contacts {
+  color: white;
+  background-color: #1e1e1e;
+  -webkit-transition: background-color 0.5s linear, color 0.5s linear;
+  transition: background-color 0.5s linear, color 0.5s linear;
+}
+
+.dark .footer {
+  background-color: #1e1e1e;
+  -webkit-transition: background-color 0.5s linear;
+  transition: background-color 0.5s linear;
+}
+
 /*Режим презентации*/
 /*# sourceMappingURL=style.css.map */

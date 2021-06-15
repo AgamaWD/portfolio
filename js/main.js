@@ -53,3 +53,10 @@ function scrollFn(e) {
         });
     }
 };
+
+/*Переключение темы*/
+
+function themeToggle() {
+    const body = document.querySelector('body')
+    body.classList.toggle('dark')
+}

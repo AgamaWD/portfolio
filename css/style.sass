@@ -1,13 +1,19 @@
 
-$text_color_light: rgb(50, 50, 50)
+$text_color_dark: rgb(50, 50, 50)
 
-$text_color_dark: rgb(255, 255, 255)
+$text_color_light: rgb(255, 255, 255)
 
 $bg_color_light_1: rgb(249, 249, 249)
 
 $bg_color_light_2: rgb(238, 239, 241)
 
+$bg_color_dark_1: rgb(30, 30, 30)
+
+$bg_color_dark_2: rgb(37, 37, 38)
+
 $primary_color: rgb(52, 84, 122)
+
+$transition_delay: .5s
 
 @mixin title() 
     font-family: 'Roboto', sans-serif
@@ -34,7 +40,7 @@ $primary_color: rgb(52, 84, 122)
     font-size: 0.9rem
     line-height: 1.42em
     text-transform: uppercase
-    color: $text_color_dark
+    color: $text_color_light
     text-align: center
     padding: 15px 30px
     background-color: $primary_color
@@ -57,6 +63,7 @@ a
     @include text()
     text-decoration: none
     color: inherit
+    transition: color 1s linear
     &:hover
         text-decoration: underline  
 
@@ -64,6 +71,7 @@ a
     background-color: $bg_color_light_2
     padding-top: 80px
     width: 100%
+    transition: background-color $transition_delay linear
     &.fixed
         position: fixed
         top: 0
@@ -95,10 +103,10 @@ a
             font-size: 0.8rem
             width: 150px
             display: block
-            border: 2px solid $text_color_light
+            border: 2px solid $text_color_dark
             border-radius: 20px
             height: 2.5em
-            text-align: right
+            transition: border $transition_delay linear, color $transition_delay linear
             &::before
                 content: ''
                 position: absolute
@@ -107,21 +115,41 @@ a
                 display: block
                 width: 23%
                 height: 100%
-                background-color: $text_color_light
+                background-color: $text_color_dark
                 border-radius: 20px
+                transition: background-color $transition_delay linear
             span
                 display: inline-block
                 text-align: center
-                width: 80%
+                overflow: hidden
         .nav__settings-color
-                margin-top: 0.5em 
-                margin-bottom: 1em
+            margin-top: 0.5em
+            margin-bottom: 1em
+            padding-left: 20%
+            transition: padding-left $transition_delay linear
+            span:first-child
+                width: 0%
+                transition: width $transition_delay linear
+            span:last-child
+                width: 80%
+                transition: width $transition_delay linear
+            &::before
+                left: 0
+                transition: left $transition_delay linear
         .nav__settings-scrolling
                 margin-bottom: 0.5em
+                text-align: right
+                span:first-child
+                    width: 0%
+                    transition: width $transition_delay linear
+                span:last-child
+                    width: 80%
+                    transition: width $transition_delay linear
 
 .main-screen
     background-color: $bg_color_light_2
     padding: 160px 245px 145px
+    transition: background-color $transition_delay linear
     &__container
         @include flexible()
         justify-content: space-between
@@ -136,6 +164,8 @@ a
             margin-right: 50px
     &__content
         width: 685px
+        color: $text_color_dark
+        transition: color $transition_delay linear
     &__header
         @include title()
     &__text
@@ -151,10 +181,13 @@ a
     background-repeat: no-repeat
     background-position: 80% 50%, right
     padding: 120px 245px 100px
+    transition: background-color $transition_delay linear
     &__container
         @include flexible()
         justify-content: space-between
     &-content
+        color: $text_color_light
+        transition: color $transition_delay linear
         &__title
             @include subtitle()
             text-align: left
@@ -175,7 +208,10 @@ a
 .process
     text-align: center  
     background-color: $bg_color_light_2
+    color: $text_color_dark
     padding: 100px 0
+    transition: background-color $transition_delay linear, color $transition_delay linear
+               
     &__title
         @include subtitle()
     &__text
@@ -190,7 +226,7 @@ a
         position: relative
         background-repeat: no-repeat
         background-size: 100% 100%
-        color: $text_color_dark
+        color: $text_color_light
     .item
         &__title
             font-family: 'Roboto', sans-serif
@@ -227,6 +263,8 @@ a
     background-color: $bg_color_light_1
     padding: 100px 0
     text-align: center
+    color: $text_color_dark
+    transition: background-color $transition_delay linear, color $transition_delay linear
     &__title
         @include subtitle()
     &__text
@@ -282,6 +320,7 @@ a
 .footer
     padding: 50px 0
     background-color: $primary_color
+    transition: background-color $transition_delay linear
     &__container
         @include flexible()
         justify-content: space-around
@@ -311,18 +350,71 @@ a
         &__item:not(:first-child)
             margin-left: 20px 
     a
-        @include text()
-        color: rgb(0, 0, 0)
-        
+        @include text()       
 
 .hidden
     display: none !important
 
 /*Тёмная тема*/
-.color-mode--dark
+.dark
+    a
+        color: $text_color_light
+        transition: color $transition_delay linear
+    .header
+        background-color: $bg_color_dark_2
+        transition: background-color $transition_delay linear
+    .nav
+        .nav__settings-color, .nav__settings-scrolling
+            border: 2px solid $text_color_light
+            color: $text_color_light
+            transition: border $transition_delay linear, color $transition_delay linear
+            &::before
+                background-color: $text_color_light
+                transition: background-color $transition_delay linear
+        .nav__settings-color
+            padding-left: 0
+            transition: padding-left $transition_delay linear
+            &::before
+                left: 78%
+                transition: left $transition_delay linear
+            span:first-child
+                width: 80%
+                transition: width $transition_delay linear
+            span:last-child
+                width: 0%
+                transition: width $transition_delay linear
+
+    .main-screen
+        background-color: $bg_color_dark_2
+        transition: background-color $transition_delay linear
+        &__content
+            color: $text_color_light
+            transition: color $transition_delay linear
+
+    .about
+        background-color: $bg_color_dark_1
+        background-image: url(../img/my_photo.png)
+        transition: background-color $transition_delay linear
+        &-content
+            color: $text_color_light
+            transition: color $transition_delay linear
+
+
+    .process
+        color: $text_color_light
+        background-color: $bg_color_dark_2
+        transition: background-color $transition_delay linear, color $transition_delay linear
+
+    .contacts
+        color: $text_color_light
+        background-color: $bg_color_dark_1
+        transition: background-color $transition_delay linear, color $transition_delay linear
+    .footer
+        background-color: $bg_color_dark_1
+        transition: background-color $transition_delay linear
 
 /*Режим презентации*/
-.scrolling-mode--slider
+.scrolling-mode_slider
 
 
     
