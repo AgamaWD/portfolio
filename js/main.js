@@ -1,4 +1,4 @@
-/*фиксация шапки*/
+                                                                                        /*фиксация шапки*/
 
 function fixationMenu () {
     const header = document.getElementById('js-nav');
@@ -22,7 +22,7 @@ function fixationMenu () {
 };
 fixationMenu();
 
-/*Прокрутка по странице*/
+                                                                                    /*Прокрутка по странице*/
 
 function scrollFn(e) {
     e.preventDefault();
@@ -54,7 +54,8 @@ function scrollFn(e) {
     }
 };
 
-/*Переключение темы*/
+                                                                                /*Переключение темы*/
+
 function themeCheck() {
     const currThemeLS = localStorage.getItem('theme')
     const body = document.querySelector('body')
@@ -65,7 +66,7 @@ function themeCheck() {
         body.classList.add('dark')
     }
 }
-themeCheck()
+document.addEventListener("DOMContentLoaded", themeCheck);
 
 function themeToggle() {
     const body = document.querySelector('body')
