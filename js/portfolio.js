@@ -1,5 +1,12 @@
 const projects = [
     {
+        title: 'Weather (тестовое задание)',
+        description: 'Браузерное приложение погоды. Вёрстка на flex. Стили на SASS. Функционал на чистом JS. Определяет местоположение, есть выбор города из списка.',
+        background: 'img/projects/weather.gif',
+        projectlink: 'https://agamawd.github.io/weather/',
+        githubLink: 'https://github.com/AgamaWD/weather'
+    },
+    {
         title: 'Lavakon Mix (тестовое задание)',
         description: 'Лендинг производства кондитерских смесей. Вёрстка на flex. Стили на чистом CSS. Мобильное меню-гамбургер на нативном на нативном JS.',
         background: 'img/projects/lavakon_mix.gif',
@@ -7,8 +14,8 @@ const projects = [
         githubLink: 'https://github.com/AgamaWD/lavakonMix'
     },
     {
-        title: 'Средство для потенции (тестовое задание)',
-        description: 'Лендинг препарата для потенции. Вёрстка на flex. Стили на чистом CSS. Видеофон первого экрана. Анимация CSS. Слайдер и счётчик на нативном JS.',
+        title: 'Аптечный препарат (тестовое задание)',
+        description: 'Лендинг аптечного препарата. Вёрстка на flex. Стили на чистом CSS. Видеофон первого экрана. Анимация CSS. Слайдер и счётчик на нативном JS.',
         background: 'img/projects/level_up.gif',
         projectlink: 'http://a98836qh.beget.tech/level_up/',
         githubLink: 'https://github.com/AgamaWD/levelUp'
@@ -27,13 +34,13 @@ const projects = [
         projectlink: 'http://a98836qh.beget.tech/Marathon/',
         githubLink: 'https://github.com/AgamaWD'
     },
-    /*{
+    {
         title: 'Email-письмо',
         description: 'По всем канонам вёрстки email-рассылок.',
         background: 'img/projects/email.gif',
         projectlink: 'http://a98836qh.beget.tech/email/',
         githubLink: 'https://github.com/AgamaWD/emails'
-    },*/
+    },
 ]
 const numberOfProjects = projects.length
 const projectContainer = document.getElementById('js-portfolio')
