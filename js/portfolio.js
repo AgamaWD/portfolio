@@ -4,42 +4,36 @@ const projects = [
         description: 'Браузерное приложение погоды. Вёрстка на flex. Стили на SASS. Функционал на чистом JS. Определяет местоположение, есть выбор города из списка.',
         background: 'img/projects/weather.gif',
         projectlink: 'https://agamawd.github.io/weather/',
-        githubLink: 'https://github.com/AgamaWD/weather'
     },
     {
         title: 'Lavakon Mix (тестовое задание)',
         description: 'Лендинг производства кондитерских смесей. Вёрстка на flex. Стили на чистом CSS. Мобильное меню-гамбургер на нативном на нативном JS.',
         background: 'img/projects/lavakon_mix.gif',
         projectlink: 'a98836qh.beget.tech/lavakonMix',
-        githubLink: 'https://github.com/AgamaWD/lavakonMix'
     },
     {
         title: 'Аптечный препарат (тестовое задание)',
         description: 'Лендинг аптечного препарата. Вёрстка на flex. Стили на чистом CSS. Видеофон первого экрана. Анимация CSS. Слайдер и счётчик на нативном JS.',
         background: 'img/projects/level_up.gif',
         projectlink: 'http://a98836qh.beget.tech/level_up/',
-        githubLink: 'https://github.com/AgamaWD/levelUp'
     },
     {
         title: 'Ремонт квартир (учебный проект)',
         description: 'Лендинг по ремонту квартир под ключ. Использовался Slick слайдер, библиотека wow.js, валидация форм и маска телефона на jQuery. Стили написаны на SASS. Настроена отправка формы через Ajax.',
         background: 'img/projects/repair.gif',
         projectlink: 'http://a98836qh.beget.tech',
-        githubLink: 'https://github.com/AgamaWD/WebStartTranningRepair'
     },
     {
         title: 'Разработка приложений и сайтов (учебный проект)',
         description: 'Лендинг по разработке приложений и сайтов. Вёрстка на flex. Стили на чистом CSS. Использовался Slick слайдер, jQuery.',
         background: 'img/projects/marathon.gif',
         projectlink: 'http://a98836qh.beget.tech/Marathon/',
-        githubLink: 'https://github.com/AgamaWD'
     },
     {
         title: 'Email-письмо',
         description: 'По всем канонам вёрстки email-рассылок.',
         background: 'img/projects/email.gif',
         projectlink: 'http://a98836qh.beget.tech/email/',
-        githubLink: 'https://github.com/AgamaWD/emails'
     },
 ]
 const numberOfProjects = projects.length
@@ -60,7 +54,6 @@ function createProject() {
                             </div>
                             <div>
                                 <a href="${projectlink}" target='_blank' class="item__link">Открыть сайт</a>
-                                <a href="${githubLink}" target='_blank' class="item__link">Открыть на GitHub</a>
                             </div>
                         </div>`
         let portfolioItem = document.createElement('div')
