@@ -11,7 +11,7 @@
     <meta property="og:title" content="Alexander_Wh портфолио | Главная">
     <meta property="og:description" content="Портфолио верстальщика Alexander_Wh. Кроссбраузерная адаптивная вёрстка сайтов по дизайн-макетам.">
     <meta property="og:image" content="img/favicon.png">
-    <link rel="canonical" href="https://"> <!--ТУТ НУЖНО ВПИСАТЬ ДОМЕН-->
+    <link rel="canonical" href="https://awh-tech.ru">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
@@ -29,12 +29,8 @@
             </div>
             <div class="nav__settings">
                 <button type='button' class="nav__settings-color" onclick="themeToggle()">
-                    <span>СВЕТЛАЯ</span>
-                    <span>ТЁМНАЯ</span>
-                </button>
-                <button type='button' class="nav__settings-scrolling">
-                    <span>ПРОКРУТКА</span>
-                    <span>ПРЕЗЕНТАЦИЯ</span>
+                    <span>ДЕНЬ</span>
+                    <span>НОЧЬ</span>
                 </button>
             </div>
         </nav>
@@ -47,7 +43,10 @@
                 </div>
                 <div class="main-screen__content">
                     <h1 class="main-screen__header">Вёрстка и программирование</h1>
-                    <p class="main-screen__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                    <p class="main-screen__text">
+                        Вёрстка - это создание и настройка видимой части сайта, той, которую показывает браузер посетителю и с которой этот посетитель взаимодействует. Строится вёрстка на трёх китах: HTML, CSS, JavaScript.
+                        <br>Как правило вёрстке предшествует разработка дизайн-макета, по которому делается вёрстка, но это не обязательно, можно верстать "на лету". Всё зависит от навыков верстальщика и того насколько подробно составлено техническое задание на разработку сайта. 
+                        <br>Под программированием тут подразумевается так же только та часть сайта, с которой взаимодействует пользователь, помимо этого есть большая часть сайта - бэкэнд - её программируют уже другие специалисты.  
                     </p>
                     <div class=".technologies">
                         <img src="img/html_logo_dark.svg" alt="html logo" class="technologies__item">
@@ -61,7 +60,9 @@
             <div class="container about__container">
                 <div class="about-content">
                     <h2 class="about-content__title">Обо мне</h2>
-                    <p class="about-content__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+                    <p class="about-content__text">
+                        Привет! Меня зовут, Александр. Я верстальщик. 
+                    </p>
                     <a class="about-content__btn" href='#js-portfolio' onclick="scrollFn(event)">Посмотреть работы</a>
                     <a href='https://krasnodar.hh.ru/resume/3a355e50ff07bf14170039ed1f747531776b72' class='about-content__btn' target='_blank'>Посмотреть резюме</a>
                     <a class="about-content__btn" href='#form' onclick="scrollFn(event)">Написать мне</a>
@@ -71,8 +72,26 @@
         </section>
         <section class="section process" id='process'>
             <div class="container">
-                <h2 class="process__title">Как создаётся сайт</h2>
-                <p class="process__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+                <h2 class="process__title">Как верстается сайт</h2>
+                <div class="process__items">
+                    <div class="process__item">
+                        <h3 class='process__item-title'>1. РАЗМЕТКА</h3>
+                        <p class="process__item-text">Сначала на языке разметки (HTML) пишется основа сайта, своего рода каркас. Пишется в соответствии с требованиями семантической разметки в будущем это поможет поиковым системам, сделать верный выбор 😉 и поднять позиции сайта выше в выдаче. Добавляются все нужные элементы: тексты, кнопки, формы обратной связи, картинки, видео и прочий контент. Весь медиа-контент оптимизируется, для достижения максимальной скорости загрузки страницы.🚀</p>
+                    </div>
+                    <div class="process__item">
+                        <h3 class='process__item-title'>2. СТИЛИ</h3>
+                        <p class="process__item-text">На втором этапе на языке стилей (CSS) задаётся внешний вид страницы. Все элементы расставляются по своим местам, настраиваются цвета, размеры, отступы, добавляются несложные анимации и эффекты, настраиваются разные состояния элементов, например, вид ночной и дневной темы. Пишется всё это кроссбраузерно, то есть так чтобы во всех браузерах, даже очень старых и требовательных, 👴 сайт выглядел так как задумано дизайнером, а не так как удобно самому браузеру.</p>
+                    </div>
+                    <div class="process__item">
+                        <h3 class='process__item-title'>3. АДАПТИВНОСТЬ</h3>
+                        <p class="process__item-text">На этом этапе продолжнается настройка внешнего вида сайта. Только теперь пишется всё так чтобы сайт выглядел на любых экранах, от мала 📱 до велика 🖥️, так как задумал дизайнер или твердит здравый смысл. Меняются размеры шрифтов, там где нужно меняется положение и даже порядок элементов, но теперь для каждого размера экрана отдельно. Мобильный трафик уже давно на лидирующих позициях в статистике, поэтому этому этапу вёрстки уделяется особое внимание.</p>
+                    </div>
+                    <div class="process__item">
+                        <h3 class='process__item-title'>4. ПРОГРАММИРОВАНИЕ</h3>
+                        <p class="process__item-text">Настало время "оживить" страницу! Открытие закрытие всплывающих окон, "якори", отправка форм, переключение темы, сложные анимации, слайдеры, вкладки, меню-гамбургеры всё это и многое другое - JavaScript. Функционал пишется как с нуля, так и берутся готовые решения - плагины. Используется как чистый язык так и библиотека jQuery. Каждой задаче свой инструмент и решение! 🛠️ На этом этапе тоже учитываются требования кроссбраузерности и адаптивности.</p>
+                    </div>
+                </div>
+                <p class="process__text"></p>
                 <video class="process__video" width="1110" height="600" controls="controls" poster="video/process.jpg">
                         <source src="video/process.ogv" type='video/ogg; codecs="theora, vorbis"'>
                         <source src="video/process.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
@@ -82,38 +101,6 @@
         </section>
         <section class="section portfolio" id="js-portfolio">
            <script src="js/portfolio.js"></script>
-        </section>
-        <section class="section contacts" id="form">
-            <div class="container">
-                <h2 class="contacts__title">Хотите сайт?</h2>
-                <p class="contacts__text">Оставьте заявку в форме ниже. Выберите удобный для вас способ связи. <br>В сообщении может указать день и время когда вам будет удобно. Кратко расскажите о проекте или укажите любую другую информацию, которую считаете нужным сообщить.</p>
-                <p class='contacts__text'>Так же вы можете самостоятельно связаться со мной любым из способов представленных внизу этой страницы.</p>
-                <form action="#" class="contacts__form form">
-                    
-                    <!-- Hidden Required Fields -->
-                    <input type="hidden" name="project_name" value="Alexander_Wh портфолио">
-                    <input type="hidden" name="admin_email" value="alexanderwh99@gmail.com">
-                    <input type="hidden" name="form_subject" value="Form">
-                    <!-- END Hidden Required Fields -->
-
-                    <legend>Как Вас зовут?</legend>
-                    <input type="text" name="name" placeholder="Имя">
-                    <legend>Как с вами связаться?</legend>
-                    <div class="form__user-contacts">
-                        <fieldset>
-                            <label><input type="radio" name="communication" value="написать" checked>Написать на почту</label>
-                            <label><input type="radio" name="communication" value="позвонить">Позвонить</label>
-                        </fieldset>
-                        <fieldset>
-                            <input type="email" name="email" placeholder="Адрес почты" required>
-                            <input type="tel" name="tel" placeholder="Номер телефона" class="hidden">
-                        </fieldset>
-                    </div>
-                    <legend>Ваше сообщение:</legend>
-                    <textarea name="message" rows="10"></textarea>
-                    <button class="form__button" type="submit" name="submit">отправить</button>
-                </form>
-            </div>
         </section>
     </main>
     <footer class="footer">

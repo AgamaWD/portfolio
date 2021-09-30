@@ -1,3 +1,4 @@
+/*VARIABLES*/
 
 $text_color_dark: rgb(50, 50, 50)
 
@@ -14,6 +15,10 @@ $bg_color_dark_2: rgb(37, 37, 38)
 $primary_color: rgb(52, 84, 122)
 
 $transition_delay: .5s
+
+
+
+/*MIXINS*/
 
 @mixin title() 
     font-family: 'Roboto', sans-serif
@@ -50,6 +55,9 @@ $transition_delay: .5s
     display: flex 
     align-items: center
 
+
+
+/*SERVICE BLOCK*/
 html
     font-size: 16px
 
@@ -65,7 +73,12 @@ a
     color: inherit
     transition: color 1s linear
     &:hover
-        text-decoration: underline  
+        text-decoration: underline
+
+.hidden
+    display: none !important
+
+/*BASIC STYLES LIGHT THEME*/ 
 
 .header
     background-color: $bg_color_light_2
@@ -103,53 +116,43 @@ a
                 text-decoration: underline
                 text-decoration-thickness: 0.13em
     .nav__settings 
-        .nav__settings-color, .nav__settings-scrolling
+        .nav__settings-color
             position: relative
             font-size: 0.8rem
-            width: 150px
+            width: 80px
             display: block
             border: 2px solid $text_color_dark
             border-radius: 20px
             height: 2.5em
             transition: border $transition_delay linear, color $transition_delay linear
+            margin-top: 0.5em
+            margin-bottom: 1em
+            padding: 1px 5px 0
             &::before
                 content: ''
                 position: absolute
-                left: 0
                 top: 0
                 display: block
-                width: 23%
+                width: 40%
                 height: 100%
                 background-color: $text_color_dark
                 border-radius: 20px
                 transition: background-color $transition_delay linear
             span
                 display: inline-block
-                text-align: center
+                text-align: right
+                transition: text-align $transition_delay linear
                 overflow: hidden
-        .nav__settings-color
-            margin-top: 0.5em
-            margin-bottom: 1em
-            padding-left: 20%
-            transition: padding-left $transition_delay linear
+
             span:first-child
                 width: 0%
                 transition: width $transition_delay linear
             span:last-child
-                width: 80%
+                width: 85%
                 transition: width $transition_delay linear
             &::before
-                left: 0
-                transition: left $transition_delay linear
-        .nav__settings-scrolling
-                margin-bottom: 0.5em
-                text-align: right
-                span:first-child
-                    width: 0%
-                    transition: width $transition_delay linear
-                span:last-child
-                    width: 80%
-                    transition: width $transition_delay linear
+                right: 65%
+                transition: right $transition_delay linear
 
 .main-screen
     background-color: $bg_color_light_2
@@ -176,7 +179,7 @@ a
         @include title()
     &__text
         @include text()
-        margin: 60px 0
+        margin: 40px 0
         
 .about
     position: relative
@@ -220,9 +223,23 @@ a
                
     &__title
         @include subtitle()
-    &__text
-        @include text()
-        margin: 50px 0 57px
+    
+    &__items
+        @include flexible()
+        padding: 60px 0
+        justify-content: space-between
+
+    &__item
+        width: 380px
+        box-shadow: 0px 0px 10px $primary_color
+        padding: 10px
+        border-radius: 5px 
+        &-title
+            @include subtitle()
+            margin-bottom: 20px
+            font-size: 1.2rem
+        &-text
+            @include text()
 
 .portfolio
     @include flexible()
@@ -264,65 +281,6 @@ a
         .portfolio__item--hover
             height: 100%
             transition: height .6s
-
-.contacts
-    background-color: $bg_color_light_1
-    padding: 100px 0
-    text-align: center
-    color: $text_color_dark
-    transition: background-color $transition_delay linear, color $transition_delay linear
-    &__title
-        @include subtitle()
-    &__text
-        @include text()
-        width: 540px
-        font-size: 0.95rem
-        margin: 50px auto 65px
-    &__form
-        width: 540px
-        margin: 0 auto
-    .form
-        &__user-contacts
-            @include flexible()
-            justify-content: space-between
-            margin: 20px auto
-            width: 90%
-            fieldset
-                display: inline-block
-                width: 45%
-                >input:not([type=radio])
-                    width: 100%
-                label
-                    display: inline-block
-                    width: 100%
-                    text-align: left
-                    input[type=radio]
-                        margin-right: 10px
-                label:first-child
-                    margin-bottom: 10px 
-
-        legend
-            width: 90%
-            text-align: left
-            margin: 0 auto 15px
-            font-family: 'Roboto', sans-serif
-            font-weight: 500
-            font-size: 1rem
-        legend:not(:first-child)
-            margin: 20px auto 15px
-        input:not([type=radio]), textarea
-            padding: 10px 5px
-            display: inline-block
-            box-sizing: border-box
-            width: 90%
-            border-radius: 5px
-        input:focus, textarea:focus
-            outline: none 
-            border: solid 2px $primary_color
-        &__button
-            @include button()
-            margin-top: 30px
-            width: 90%
 
 .footer
     padding: 50px 0
@@ -366,10 +324,7 @@ a
     a
         @include text()       
 
-.hidden
-    display: none !important
-
-/*Тёмная тема*/
+/*BASIC STYLES DARK THEME*/
 .dark
     a
         color: $text_color_light
@@ -381,21 +336,21 @@ a
         .nav__logo
             background-image: url(../img/logo_light.png)
             transition: background-image $transition_delay linear
-        .nav__settings-color, .nav__settings-scrolling
+        .nav__settings-color
             border: 2px solid $text_color_light
             color: $text_color_light
             transition: border $transition_delay linear, color $transition_delay linear
             &::before
                 background-color: $text_color_light
                 transition: background-color $transition_delay linear
-        .nav__settings-color
-            padding-left: 0
-            transition: padding-left $transition_delay linear
+            span
+                text-align: left
+                transition: text-align $transition_delay linear
             &::before
-                left: 78%
-                transition: left $transition_delay linear
+                right: 0%
+                transition: right $transition_delay linear
             span:first-child
-                width: 80%
+                width: 85%
                 transition: width $transition_delay linear
             span:last-child
                 width: 0%
@@ -444,8 +399,6 @@ a
                     background-image: url('../img/instagram_white.png')
                     transition: background-image $transition_delay linear
 
-/*Режим презентации*/
-.scrolling-mode_slider
 
 
     
