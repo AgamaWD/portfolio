@@ -180,6 +180,8 @@ a
     &__text
         @include text()
         margin: 40px 0
+        p:not(:last-child)
+            margin-bottom: .6rem
         
 .about
     position: relative
@@ -204,6 +206,8 @@ a
             @include text()
             width: 540px
             margin: 50px 0
+            p:not(:last-child)
+                margin-bottom: .6rem
         &__btn
             @include button()
             text-decoration: none !important
@@ -226,25 +230,70 @@ a
     
     &__items
         @include flexible()
+        flex-direction: column
         padding: 60px 0
-        justify-content: space-between
 
     &__item
-        width: 380px
-        box-shadow: 0px 0px 10px $primary_color
-        padding: 10px
-        border-radius: 5px 
+        position: relative
+        width: 650px
+        padding: 20px
+        border-radius: 5px
+        &:nth-child(2n+1)
+            transform: translateX(-55%)
+            &::after
+                content: url("../img/right.svg")
+                position: absolute
+                top: 58%
+                left: 103%
+                width: 30%
+                transform: rotate(30deg)
+                opacity: 0.2
+        &:nth-child(2)
+            &::before
+                content: url("../img/left.svg")
+                position: absolute
+                top: 58%
+                right: 103%
+                width: 30%
+                transform: rotate(-30deg)
+                opacity: 0.2
+        &:nth-child(2n)
+            transform: translateX(55%)
         &-title
             @include subtitle()
             margin-bottom: 20px
             font-size: 1.2rem
         &-text
             @include text()
+        &-bg
+            position: absolute
+            display: block
+            color: rgba(0,0,0,0)
+            -webkit-text-stroke: 5px $primary_color
+            filter: drop-shadow(-10px 10px 5px $primary_color)
+            opacity: 0.35
+        &-html
+            top: 17px
+            left: 92px
+            font-size: 200px
+        &-css
+            top: 10px
+            left: 26px
+            font-size: 200px
+        &-media
+            top: -17px
+            left: 212px
+            font-size: 175px
+        &-js
+            top: 0px
+            left: -238px
+            font-size: 202px
 
 .portfolio
-    @include flexible()
-    justify-content: space-around
-    flex-wrap: wrap
+    &__items
+        @include flexible()
+        justify-content: space-around
+        flex-wrap: wrap
     &__item
         position: relative
         background-repeat: no-repeat

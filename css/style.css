@@ -215,6 +215,10 @@ a:hover {
   margin: 40px 0;
 }
 
+.main-screen__text p:not(:last-child) {
+  margin-bottom: .6rem;
+}
+
 .about {
   position: relative;
   overflow: hidden;
@@ -264,6 +268,10 @@ a:hover {
   margin: 50px 0;
 }
 
+.about-content__text p:not(:last-child) {
+  margin-bottom: .6rem;
+}
+
 .about-content__btn {
   display: inline-block;
   font-family: 'Roboto', sans-serif;
@@ -310,18 +318,50 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 60px 0;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .process__item {
-  width: 380px;
-  -webkit-box-shadow: 0px 0px 10px #34547a;
-          box-shadow: 0px 0px 10px #34547a;
-  padding: 10px;
+  position: relative;
+  width: 650px;
+  padding: 20px;
   border-radius: 5px;
+}
+
+.process__item:nth-child(2n+1) {
+  -webkit-transform: translateX(-55%);
+          transform: translateX(-55%);
+}
+
+.process__item:nth-child(2n+1)::after {
+  content: url("../img/right.svg");
+  position: absolute;
+  top: 58%;
+  left: 103%;
+  width: 30%;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  opacity: 0.2;
+}
+
+.process__item:nth-child(2)::before {
+  content: url("../img/left.svg");
+  position: absolute;
+  top: 58%;
+  right: 103%;
+  width: 30%;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+  opacity: 0.2;
+}
+
+.process__item:nth-child(2n) {
+  -webkit-transform: translateX(55%);
+          transform: translateX(55%);
 }
 
 .process__item-title {
@@ -340,7 +380,41 @@ a:hover {
   line-height: 1.64em;
 }
 
-.portfolio {
+.process__item-bg {
+  position: absolute;
+  display: block;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 5px #34547a;
+  -webkit-filter: drop-shadow(-10px 10px 5px #34547a);
+          filter: drop-shadow(-10px 10px 5px #34547a);
+  opacity: 0.35;
+}
+
+.process__item-html {
+  top: 17px;
+  left: 92px;
+  font-size: 200px;
+}
+
+.process__item-css {
+  top: 10px;
+  left: 26px;
+  font-size: 200px;
+}
+
+.process__item-media {
+  top: -17px;
+  left: 212px;
+  font-size: 175px;
+}
+
+.process__item-js {
+  top: 0px;
+  left: -238px;
+  font-size: 202px;
+}
+
+.portfolio__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
