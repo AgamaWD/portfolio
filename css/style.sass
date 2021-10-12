@@ -299,21 +299,22 @@ a
         @include flexible()
         justify-content: space-around
         padding: 0
-        margin: 40px 0 0
+        margin: 70px 0 100px
         list-style: none
         &-item      
             @include text()
-            max-width: 250px
-            text-align: center
+            @include flexible()  
+            max-width: 400px
+            text-align: left
             img
-               width: 150px
-               height: 150px
+               width: 85px
+               height: 70px
+               margin-right: 10px
 
     &__items
         @include flexible()
         justify-content: space-around
         flex-wrap: wrap
-        margin-top: 40px
     &__item
         position: relative
         background-repeat: no-repeat
@@ -352,7 +353,7 @@ a
             transition: height .6s
 
 .footer
-    padding: 50px 0
+    padding: 50px 0 30px
     background-color: $primary_color
     transition: background-color $transition_delay linear
     &-links
@@ -361,8 +362,14 @@ a
     &__container
         @include flexible()
         justify-content: space-around
+        flex-wrap: wrap
     &__social
         @include flexible()
+    &__copyright
+        width: 100%
+        @include text()
+        text-align: center
+        margin-top: 40px
     .social
         &__item
             width: 50px

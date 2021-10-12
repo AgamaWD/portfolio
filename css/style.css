@@ -437,7 +437,7 @@ a:hover {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 0;
-  margin: 40px 0 0;
+  margin: 70px 0 100px;
   list-style: none;
 }
 
@@ -446,13 +446,20 @@ a:hover {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.64em;
-  max-width: 250px;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 400px;
+  text-align: left;
 }
 
 .portfolio__result-item img {
-  width: 150px;
-  height: 150px;
+  width: 85px;
+  height: 70px;
+  margin-right: 10px;
 }
 
 .portfolio__items {
@@ -466,7 +473,6 @@ a:hover {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 40px;
 }
 
 .portfolio__item {
@@ -531,7 +537,7 @@ a:hover {
 }
 
 .footer {
-  padding: 50px 0;
+  padding: 50px 0 30px;
   background-color: #34547a;
   -webkit-transition: background-color 0.5s linear;
   transition: background-color 0.5s linear;
@@ -550,6 +556,8 @@ a:hover {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .footer__social {
@@ -559,6 +567,16 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.footer__copyright {
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.64em;
+  text-align: center;
+  margin-top: 40px;
 }
 
 .footer .social__item {
