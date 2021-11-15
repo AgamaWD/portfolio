@@ -417,6 +417,8 @@ a:hover {
 .portfolio {
   background-color: #f9f9f9;
   padding-top: 100px;
+  -webkit-transition: background-color 0.5s linear, color 0.5s linear;
+  transition: background-color 0.5s linear, color 0.5s linear;
 }
 
 .portfolio__title {
@@ -460,6 +462,12 @@ a:hover {
   width: 85px;
   height: 70px;
   margin-right: 10px;
+  -webkit-filter: invert(0%);
+          filter: invert(0%);
+  -webkit-transition: -webkit-filter 0.5s linear;
+  transition: -webkit-filter 0.5s linear;
+  transition: filter 0.5s linear;
+  transition: filter 0.5s linear, -webkit-filter 0.5s linear;
 }
 
 .portfolio__items {
@@ -536,11 +544,174 @@ a:hover {
   transition: height .6s;
 }
 
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1e1e1e;
+  opacity: 0.9;
+}
+
+.modal-root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-body {
+  position: relative;
+  width: 800px;
+  min-height: 200px;
+  background-color: #f9f9f9;
+  padding: 30px 30px 50px;
+  border-radius: 5px;
+}
+
+.modal-close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 4px;
+  top: 4px;
+  background-image: url(../img/close.png);
+  background-size: 60% 60%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.modal-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.17em;
+}
+
+.modal-coms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  row-gap: 45px;
+  margin-top: 30px;
+}
+
+.modal-coms__item {
+  width: 35%;
+}
+
+.modal-com__title {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.17em;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+.modal-com__telegram::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -40px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-image: url(../img/modal-telegram.png);
+  background-size: 110% 110%;
+  background-position: center center;
+}
+
+.modal-com__email::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -40px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-image: url(../img/modal-email.png);
+  background-size: 130% 130%;
+  background-position: center center;
+}
+
+.modal-com__whatsapp::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -40px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-image: url(../img/modal-whatsapp.png);
+  background-size: 120% 120%;
+  background-position: center center;
+}
+
+.modal-com__direct::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -40px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-image: url(../img/modal-instagram.png);
+  background-size: 120% 120%;
+  background-position: center center;
+}
+
+.modal-com__btn {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.42em;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  padding: 15px 30px;
+  background-color: #34547a;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  padding: 8px 15px;
+}
+
+.modal-com__goto-btn {
+  margin-right: 10px;
+}
+
+.modal-com__goto-btn:hover {
+  text-decoration: none;
+}
+
 .footer {
   padding: 50px 0 30px;
   background-color: #34547a;
-  -webkit-transition: background-color 0.5s linear;
-  transition: background-color 0.5s linear;
+  color: #000;
+  -webkit-transition: background-color 0.5s linear, color 0.5s linear;
+  transition: background-color 0.5s linear, color 0.5s linear;
 }
 
 .footer-links a {
@@ -726,19 +897,25 @@ a:hover {
 
 .dark .portfolio {
   background-color: #1e1e1e;
-}
-
-.dark .contacts {
   color: white;
-  background-color: #1e1e1e;
   -webkit-transition: background-color 0.5s linear, color 0.5s linear;
   transition: background-color 0.5s linear, color 0.5s linear;
 }
 
+.dark .portfolio__result-item img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  -webkit-transition: -webkit-filter 0.5s linear;
+  transition: -webkit-filter 0.5s linear;
+  transition: filter 0.5s linear;
+  transition: filter 0.5s linear, -webkit-filter 0.5s linear;
+}
+
 .dark .footer {
   background-color: #1e1e1e;
-  -webkit-transition: background-color 0.5s linear;
-  transition: background-color 0.5s linear;
+  color: white;
+  -webkit-transition: background-color 0.5s linear, color 0.5s linear;
+  transition: background-color 0.5s linear, color 0.5s linear;
 }
 
 .dark .footer .social__item.github {
