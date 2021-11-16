@@ -6,6 +6,7 @@ async function copy(event, id) {
     try {
         await navigator.clipboard.writeText(text);
         tooltip.style.position = 'fixed';
+        tooltip.style.zIndex = '1100';
         tooltip.style.top = `${event.clientY-45}px`;
         tooltip.style.left = `${event.clientX-50}px`;
         document.body.appendChild(tooltip);
