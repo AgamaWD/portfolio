@@ -287,6 +287,11 @@ a:hover {
   text-decoration: none !important;
 }
 
+.about-content__btn:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
 .about__img {
   display: none;
   position: absolute;
@@ -593,6 +598,11 @@ a:hover {
   background-position: center center;
 }
 
+.modal-close:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
 .modal-title {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -696,6 +706,11 @@ a:hover {
   border-radius: 5px;
   font-size: 0.7rem;
   padding: 8px 15px;
+}
+
+.modal-com__btn:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .modal-com__goto-btn {

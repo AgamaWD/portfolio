@@ -50,6 +50,8 @@ $transition_delay: .5s
     padding: 15px 30px
     background-color: $primary_color
     border-radius: 5px
+    &:active
+        transform: scale(0.9)
 
 @mixin flexible()
     display: flex 
@@ -390,6 +392,8 @@ a
         background-size: 60% 60%
         background-repeat: no-repeat
         background-position: center center
+        &:active
+            transform: scale(0.9)
 
     &-title
         @include subtitle()

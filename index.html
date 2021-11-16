@@ -67,7 +67,7 @@
                     </div>
                     <a class="about-content__btn" href='#js-portfolio' onclick="scrollFn(event)">Посмотреть работы</a>
                     <a href='https://krasnodar.hh.ru/resume/3a355e50ff07bf14170039ed1f747531776b72' class='about-content__btn' target='_blank'>Посмотреть резюме</a>
-                    <a class="about-content__btn" href='#form' onclick="scrollFn(event)">Написать мне</a>
+                    <a class="about-content__btn" href='#form' onclick="openModal()">Написать мне</a>
                 </div>
                 <img src="img/my_photo.png" alt="my photo" class="about__img">
             </div>
@@ -129,28 +129,28 @@
             <div class="modal-bg"></div>
             <div class="modal-root">
                 <div class="modal-body">
-                    <button class="modal-close"></button>
+                    <button class="modal-close"  onclick="closeModal()"></button>
                     <P class="modal-title">Свяжитесь со мной удобным для вас способом:</P>
                     <div class="modal-coms">
                         <div class="modal-coms__item modal-com">
-                            <p class="modal-com__title modal-com__telegram">Telegram</p>
+                            <p class="modal-com__title modal-com__telegram" id="js-copy__telegram">@Alexander_Wh</p>
                             <a href="https://t.me/Alexander_Wh" class="modal-com__goto-btn modal-com__btn">Написать</a>
-                            <button class="modal-com__copy-btn modal-com__btn">Копировать ссылку</button>
+                            <button class="modal-com__copy-btn modal-com__btn" onclick="copy(event, 'js-copy__telegram')">Копировать</button>
                         </div>
                         <div class="modal-coms__item modal-com">
-                            <p class="modal-com__title modal-com__email">Email</p>
+                            <p class="modal-com__title modal-com__email" id="js-copy__email">alexanderwh99@gmail.com</p>
                             <a href="mailto:alexanderwh99@gmail.com" class="modal-com__goto-btn modal-com__btn">Написать</a>
-                            <button class="modal-com__copy-btn modal-com__btn">Копировать ссылку</button>
+                            <button class="modal-com__copy-btn modal-com__btn" onclick="copy(event, 'js-copy__email')">Копировать</button>
                         </div>
                         <div class="modal-coms__item modal-com">
-                            <p class="modal-com__title modal-com__whatsapp">WhatsApp</p>
+                            <p class="modal-com__title modal-com__whatsapp" id="js-copy__whatsapp">+79883662666</p>
                             <a href="https://api.whatsapp.com/send?phone=79883662666" class="modal-com__goto-btn modal-com__btn">Написать</a>
-                            <button class="modal-com__copy-btn modal-com__btn">Копировать ссылку</button>
+                            <button class="modal-com__copy-btn modal-com__btn" onclick="copy(event, 'js-copy__whatsapp')">Копировать</button>
                         </div>
                         <div class="modal-coms__item modal-com">
-                            <p class="modal-com__title modal-com__direct">Direct</p>
+                            <p class="modal-com__title modal-com__direct" id="js-copy__instagram">@alexander__wh</p>
                             <a href="https://www.instagram.com/alexander__wh" class="modal-com__goto-btn modal-com__btn">Написать</a>
-                            <button class="modal-com__copy-btn modal-com__btn">Копировать ссылку</button>
+                            <button class="modal-com__copy-btn modal-com__btn" onclick="copy(event, 'js-copy__instagram')">Копировать</button>
                         </div>
                     </div>
                 </div>
@@ -174,5 +174,6 @@
     </footer>
     <script src="js/main.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/copy.js"></script>
 </body>
 </html>
