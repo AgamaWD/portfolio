@@ -329,7 +329,7 @@ a
         &__title
             font-family: 'Roboto', sans-serif
             font-weight: 500
-            font-size: 1.3rem
+            font-size: 1.25rem
             line-height: 1.17em
             margin: 20px 0
         &__description
@@ -340,7 +340,7 @@ a
         display: flex
         position: absolute
         width: 100%
-        height: 0%
+        height: 4.2rem
         bottom: 0
         left: 0
         padding: 0px 20px
@@ -605,6 +605,67 @@ a
                     transition: background-image $transition_delay linear
 
 
+/*RESPONSIVENESS SETTINGS*/
+@media (max-width: 1800px)
+    .main-screen
+        padding: 160px 160px 145px
+    .about
+        padding: 120px 160px 100px
+        background-position: 120% 50%, right
+    .portfolio
+        .item
+            &__title
+                margin: 20px 0 10px
+        &__item--hover
+            height: 3.5rem
+            div:last-child
+                margin-bottom: 10px
+    .footer__container
+        justify-content: space-between
+
+@media (max-width: 1600px)
+    .main-screen
+        padding: 160px 50px 145px
+    .about
+        padding: 120px 60px 100px
+        background-position: 140% 50%, right
+
+@media (max-width: 1400px)
+    .header
+        padding-top: 0
+    .main-screen
+        padding: 160px 30px 145px
+        &__header
+            font-size: 2.7rem
+
+
+
+
+/*ПРОДОЛЖИТЬ АДАПТИРОВАТЬ ТУТ*/    
+
+
 
     
+            
+    .about
+        padding: 120px 30px 100px
+        background-position: 300% 50%, right  
+//@media (max-width: 1200px)
+//@media (max-width: 900px)
+//@media (max-width: 600px)
+/*Популярные размеры экранов:
+    320х534
+    320х528
+    360х640
+    375х667
+    480х800
+    720х1280
+    768х1024
+    1024х768
+    1280х800
+    1280х1024
+    1366х768
+    1440х900
+    1600х900
+    1920х1080*/ 
 

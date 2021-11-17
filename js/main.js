@@ -3,6 +3,12 @@
 function fixationMenu () {
     const header = document.getElementById('js-nav');
     const mainScreen = document.getElementById('js-main-screen')
+    const point600 = window.matchMedia('(max-width: 600px)')
+    const point900 = window.matchMedia('(max-width: 900px)')
+    const point1200 = window.matchMedia('(max-width: 1200px)')
+    const point1400 = window.matchMedia('(max-width: 1400px)')
+    const point1600 = window.matchMedia('(max-width: 1600px)')
+    const point1800 = window.matchMedia('(max-width: 1800px)')
     
     if (!header) return;
 
@@ -11,12 +17,54 @@ function fixationMenu () {
 
         if(currentOfset >= 80) {
             header.classList.add('fixed');
-            mainScreen.style = 'padding: 330px 245px 145px;'
+            switch(true) {
+                case point600.matches:
+                    mainScreen.style = 'padding: 250px 245px 145px;';
+                    break;
+                case point900.matches:
+                    mainScreen.style = 'padding: 250px 245px 145px';
+                    break;
+                case point1200.matches:
+                    mainScreen.style = 'padding: 250px 245px 145px;';
+                    break;
+                case point1400.matches:
+                    mainScreen.style = 'padding: 250px 30px 145px;';
+                    break;
+                case point1600.matches:
+                    mainScreen.style = 'padding: 330px 50px 145px';
+                    break;
+                case point1800.matches:
+                    mainScreen.style = 'padding: 330px 160px 145px';
+                    break;
+                default:
+                    mainScreen.style = 'padding: 330px 245px 145px';
+            } 
         }
 
         if(currentOfset <= 80) {
             header.classList.remove('fixed');
-            mainScreen.style = 'padding: 160px 245px 145px;'
+            switch(true) {
+                case point600.matches:
+                    mainScreen.style = 'padding: 160px 245px 145px;';
+                    break;
+                case point900.matches:
+                    mainScreen.style = 'padding: 160px 245px 145px';
+                    break;
+                case point1200.matches:
+                    mainScreen.style = 'padding: 160px 245px 145px;';
+                    break;
+                case point1400.matches:
+                    mainScreen.style = 'padding: 160px 30px 145px;';
+                    break;
+                case point1600.matches:
+                    mainScreen.style = 'padding: 160px 50px 145px';
+                    break;
+                case point1800.matches:
+                    mainScreen.style = 'padding: 160px 160px 145px';
+                    break;
+                default:
+                    mainScreen.style = 'padding: 160px 245px 145px';
+            }
         }
     });
 };
