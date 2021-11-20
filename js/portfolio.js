@@ -30,7 +30,7 @@ const projects = [
         projectlink: 'http://a98836qh.beget.tech',
         gpsLink: ''
     },
-    /*{
+    {
         title: 'Разработка приложений и сайтов (лендинг)',
         description: 'Лендинг по разработке приложений и сайтов. Вёрстка на flex. Стили на чистом CSS. Использовался Slick слайдер, jQuery.',
         background: 'img/projects/marathon.gif',
@@ -43,7 +43,7 @@ const projects = [
         background: 'img/projects/email.gif',
         projectlink: 'http://a98836qh.beget.tech/email/',
         gpsLink: ''
-    },*/
+    },
 ]
 const numberOfProjects = projects.length
 const projectContainer = document.getElementById('js-portfolio')

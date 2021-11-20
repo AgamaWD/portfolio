@@ -1009,12 +1009,12 @@ a:hover {
   .main-screen__header {
     font-size: 2.7rem;
   }
-  .about {
-    padding: 120px 30px 100px;
-    background-position: 300% 50%, right;
-  }
 }
 
+/*ПРОДОЛЖИТЬ АДАПТИРОВАТЬ ТУТ*/
+/* .about
+        padding: 120px 30px 100px
+        background-position: 300% 50%, right  */
 /*Популярные размеры экранов:
     320х534
     320х528
