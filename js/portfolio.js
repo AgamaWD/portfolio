@@ -3,6 +3,13 @@
 
 const projects = [
     {
+        title: 'CookToo (главная)',
+        description: 'Главная страница сайта по доставке еды. Вёрстка на flex+Grid. Стили на SASS. Функционала не много - только спойлеры на чистом JS. Без адаптивной версии.',
+        background: 'img/projects/cooktoo.gif',
+        projectlink: 'https://agamawd.github.io/Cooktoo/',
+        gpsLink: ''
+    },
+    {
         title: 'Weather (браузерное приложение)',
         description: 'Браузерное приложение погоды. Вёрстка на flex. Стили на SASS. Функционал на чистом JS. Определяет местоположение, есть выбор города из списка.',
         background: 'img/projects/weather.gif',
@@ -16,13 +23,13 @@ const projects = [
         projectlink: 'a98836qh.beget.tech/lavakonMix',
         gpsLink: ''
     },
-    {
+    /*{
         title: 'Аптечный препарат (лендинг)',
         description: 'Лендинг аптечного препарата. Вёрстка на flex. Стили на чистом CSS. Видеофон первого экрана. Анимация CSS. Слайдер и счётчик на нативном JS.',
         background: 'img/projects/level_up.gif',
         projectlink: 'http://a98836qh.beget.tech/level_up/',
         gpsLink: ''
-    },
+    },*/
     {
         title: 'Ремонт квартир (лендинг)',
         description: 'Лендинг по ремонту квартир под ключ. Использовался Slick слайдер, библиотека wow.js, валидация форм и маска телефона на jQuery. Отправка формы через Ajax.',
