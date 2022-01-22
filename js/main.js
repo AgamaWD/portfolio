@@ -1,6 +1,6 @@
                                                                                         /*фиксация шапки*/
 
-function fixationMenu () {
+/*function fixationMenu () {
     const header = document.getElementById('js-nav');
     const mainScreen = document.getElementById('js-main-screen')
     const point600 = window.matchMedia('(max-width: 600px)')
@@ -13,11 +13,11 @@ function fixationMenu () {
     if (!header) return;
 
     window.addEventListener('scroll', () => {
-        let currentOfset = window.pageYOffset;
+        let currentOffset = window.pageYOffset;
 
-        if(currentOfset >= 80) {
+        if(currentOffset >= 80) {
             header.classList.add('fixed');
-            switch(true) {
+           switch(true) {
                 case point600.matches:
                     mainScreen.style = 'padding: 250px 245px 145px;';
                     break;
@@ -38,10 +38,10 @@ function fixationMenu () {
                     break;
                 default:
                     mainScreen.style = 'padding: 330px 245px 145px';
-            } 
+            }
         }
 
-        if(currentOfset <= 80) {
+        if(currentOffset <= 80) {
             header.classList.remove('fixed');
             switch(true) {
                 case point600.matches:
@@ -68,7 +68,7 @@ function fixationMenu () {
         }
     });
 };
-fixationMenu();
+fixationMenu();*/
 
                                                                                     /*Прокрутка по странице*/
 

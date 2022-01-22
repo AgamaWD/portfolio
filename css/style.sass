@@ -83,26 +83,26 @@ a
 /*BASIC STYLES LIGHT THEME*/ 
 
 .header
+    position: fixed
+    top: 0
+    left: 0
     background-color: $bg_color_light_2
-    padding-top: 80px
+    padding-top: 20px
     width: 100%
     transition: background-color $transition_delay linear
-    &.fixed
-        position: fixed
-        top: 0
-        left: 0
-        padding-top: 0
-        z-index: 800
+    z-index: 800
 
 .nav
     @include flexible()
     @include text()
     justify-content: space-between
+    height: 85px
     .nav__logo
         display: inline-block
-        width: 281px
-        height: 90px
-        background-image: url(../img/logo_dark.png)
+        align-self: flex-start
+        width: 200px
+        height: 59.6445px
+        background-image: url(../img/logo_dark.svg)
         background-size: 100% 100% 
         transition: background-image $transition_delay linear
     .nav__menu
@@ -529,7 +529,7 @@ a
         transition: background-color $transition_delay linear
     .nav
         .nav__logo
-            background-image: url(../img/logo_light.png)
+            background-image: url(../img/logo_light.svg)
             transition: background-image $transition_delay linear
         .nav__settings-color
             border: 2px solid $text_color_light
