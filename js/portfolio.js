@@ -3,15 +3,22 @@
 
 const projects = [
     {
+        title: 'Строитель (страница ЖК)',
+        description: 'Страница жилого комплекса на сайте строительной компании. Вёрстка на flex+Grid. Стили на SASS. Вкладки - swiper.js. Мобильное меню - JavaScript Native',
+        background: 'img/projects/stroitel.gif',
+        projectlink: 'https://agamawd.github.io/stroitel/',
+        gpsLink: ''
+    },
+    {
         title: 'CookToo (главная)',
-        description: 'Главная страница сайта по доставке еды. Вёрстка на flex+Grid. Стили на SASS. Функционала не много - только спойлеры на чистом JS. Без адаптивной версии.',
+        description: 'Главная страница сайта по доставке еды. Вёрстка на flex+Grid. Стили на SASS. Функционала не много - только спойлеры на чистом JavaScript. Без адаптивной версии.',
         background: 'img/projects/cooktoo.gif',
         projectlink: 'https://agamawd.github.io/Cooktoo/',
         gpsLink: ''
     },
     {
         title: 'Weather (браузерное приложение)',
-        description: 'Браузерное приложение погоды. Вёрстка на flex. Стили на SASS. Функционал на чистом JS. Определяет местоположение, есть выбор города из списка.',
+        description: 'Браузерное приложение погоды. Вёрстка на flex. Стили на SASS. Функционал на чистом JavaScript. Определяет местоположение, есть выбор города из списка.',
         background: 'img/projects/weather.gif',
         projectlink: 'https://agamawd.github.io/weather/',
         gpsLink: ''
@@ -20,16 +27,16 @@ const projects = [
         title: 'Lavakon Mix (лендинг)',
         description: 'Лендинг производства кондитерских смесей. Вёрстка на flex. Стили на чистом CSS. Мобильное меню-гамбургер на нативном на нативном JS.',
         background: 'img/projects/lavakon_mix.gif',
-        projectlink: 'a98836qh.beget.tech/lavakonMix',
+        projectlink: 'http://a98836qh.beget.tech/lavakonMix/',
         gpsLink: ''
     },
-    /*{
+    {
         title: 'Аптечный препарат (лендинг)',
         description: 'Лендинг аптечного препарата. Вёрстка на flex. Стили на чистом CSS. Видеофон первого экрана. Анимация CSS. Слайдер и счётчик на нативном JS.',
         background: 'img/projects/level_up.gif',
         projectlink: 'http://a98836qh.beget.tech/level_up/',
         gpsLink: ''
-    },*/
+    },
     {
         title: 'Ремонт квартир (лендинг)',
         description: 'Лендинг по ремонту квартир под ключ. Использовался Slick слайдер, библиотека wow.js, валидация форм и маска телефона на jQuery. Отправка формы через Ajax.',
