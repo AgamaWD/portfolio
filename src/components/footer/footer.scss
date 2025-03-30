@@ -1,0 +1,32 @@
+.ak-footer {
+    background-color: $c-accent;
+    padding: 48px 0;
+
+    &__container {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+
+    &__contacts {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        gap: 32px;
+    }
+
+    &__link {
+        color: $c-white;
+        -webkit-transition: color $transitions;
+        -o-transition: color $transitions;
+        transition: color $transitions;
+
+        &:hover {
+            color: $c-bg;
+        }
+    }
+}

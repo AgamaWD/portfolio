@@ -1,0 +1,62 @@
+include ../components/p-block/index.pug
+
+.ak-section
+    .ak-container.ak-section__container
+        .ak-section__sidebar
+            .ak-section__sticky
+                .ak-section__title 2023
+        .ak-section__content
+            +p-block({
+                title: 'Меридиан',
+                tags: [
+                    'Pug',
+                    'SCSS',
+                    'Vanilla JS',
+                    'GSAP'
+                ],
+                items: [
+                    {
+                        title: 'Главная страница',
+                        link: 'https://meridiant.ru/',
+                        desc: 'Вообще сайт разрабатывался в команде, я тут делал блок отрасли и блок услуги. Использовал GSAP-анимацию и canvas. Фильтры на js самописные'
+                    },
+                    {
+                        title: 'Внутренние страницы',
+                        link: 'https://meridiant.ru/services/supply-of-components/',
+                        desc: 'Делал не одну страницу на этом сайте. Из интересного хочу показать эту. Реализована так же с помощью GSAP.'
+                    }
+                ],
+                galleryPreview: 'assets/images/projects/meridian/meridian_preview.png',
+                galleryImages: [
+                    'assets/images/projects/meridian/meridian_1.jpg',
+                    'assets/images/projects/meridian/meridian_2.jpg'
+                ],
+                galleryName: 'meridian'
+            })
+
+            +p-block({
+                title: 'Байк центр',
+                tags: [
+                    'HTML',
+                    'CSS',
+                    'Vanilla JS',
+                    'PHP'
+                ],
+                description: 'Интернет-магазин спортивных товаров на Битриксе. В проект я пришёл когда он уже был натянут на CMS и работал, поэтому вёрстку правил прям в PHP-шаблонах. Моей задачей была перевёрстка под новый дизайн, правки старых багов и вёрстка новых страниц.',
+                items: [
+                    {
+                        title: 'Главная страница',
+                        link: 'https://bike-centre.ru/',
+                        desc: 'Тут можно посмотреть меню которое открывается кнопкой "Каталог" - полностью моя работа. большинство блоков я тоже переделывал, но они не столь интересны.'
+                    },
+                    {
+                        title: 'Trade-in',
+                        link: 'https://bike-centre.ru/trade-in/',
+                        desc: 'Это пример страницы которую с нуля делал. Из интересного форма с драг-н-дропом и валидацией.'
+                    }
+                ],
+                galleryPreview: '',
+                galleryImages: [],
+                galleryName: 'bikecentre'
+            })
+

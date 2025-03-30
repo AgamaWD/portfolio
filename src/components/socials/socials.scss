@@ -1,0 +1,23 @@
+.socials {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 16px;
+
+    &__link {
+        color: $c-white;
+        -webkit-transition: color $transitions;
+        -o-transition: color $transitions;
+        transition: color $transitions;
+
+        &:hover {
+            color: $c-bg;
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
