@@ -13,18 +13,30 @@
 
     &__name {
         font-size: 32px;
+
+        @media (max-width: $m-xs) {
+            font-size: 24px;
+        }
     }
 
     &__position {
         font-size: 14px;
         margin-top: 8px;
         color: $c-text;
+
+        @media (max-width: $m-xs) {
+            font-size: 12px;
+        }
     }
 
     &__title {
         font-size: 28px;
         text-transform: uppercase;
         font-weight: 600;
+
+        @media (max-width: $m-tablet) {
+            display: none;
+        }
     }
 
     &__contacts {
@@ -33,6 +45,16 @@
         -webkit-box-align: center;
         align-items: center;
         gap: 32px;
+
+        @media (max-width: $m-tablet) {
+            gap: 16px;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        @media (max-width: $m-mobile) {
+            display: none;
+        }
     }
 
     &__link {

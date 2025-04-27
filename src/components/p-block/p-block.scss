@@ -9,8 +9,35 @@
     border-radius: 8px;
     gap: 40px;
 
+    @media (max-width: $m-laptop) {
+        gap: 24px;
+        padding: 16px;
+    }
+
+    @media (max-width: $m-tablet) {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    &__info {
+        flex: 1 1 60%;
+
+        @media (max-width: $m-tablet) {
+            flex: auto;
+            display: contents;
+        }
+    }
+
     &__title {
         font-size: 48px;
+
+        @media (max-width: $m-tablet) {
+            order: -1;
+        }
+
+        @media (max-width: $m-xs) {
+            font-size: 32px;
+        }
     }
 
     &__tags {
@@ -21,6 +48,10 @@
         flex-wrap: wrap;
         gap: 8px;
         margin-top: 8px;
+
+        @media (max-width: $m-tablet) {
+            order: -1;
+        }
     }
 
     &__tag {
@@ -29,6 +60,10 @@
         padding: 0 8px 0 12px;
         white-space: nowrap;
         color: $c-text;
+
+        @media (max-width: $m-xs) {
+            font-size: 16px;
+        }
 
         &:before {
             content: '';
@@ -54,21 +89,41 @@
         align-items: stretch;
         gap: 32px;
         margin-top: 32px;
+
+        @media (max-width: $m-xs) {
+            gap: 24px;
+            margin-top: 24px;
+        }
     }
 
     &__text {
         font-size: 18px;
         color: $c-text;
+
+        @media (max-width: $m-xs) {
+            font-size: 14px;
+        }
     }
 
     &__desc {
         margin-top: 32px;
         color: $c-white;
+
+        @media (max-width: $m-xs) {
+            margin-top: 24px;
+        }
     }
 
     &__gallery {
         -webkit-box-flex: 0;
         flex: 0 0 40%;
+
+        @media (max-width: $m-tablet) {
+            flex-basis: 100%;
+            margin-top: 24px;
+            max-width: 400px;
+            order: -1;
+        }
     }
 
     &__item {
@@ -91,6 +146,15 @@
             text-decoration: underline;
             color: $c-text;
         }
+
+        &[href="javascript:void(0);"] {
+            text-decoration: none;
+            pointer-events: none;
+        }
+
+        @media (max-width: $m-xs) {
+            font-size: 18px;
+        }
     }
 
     &__preview {
@@ -100,6 +164,10 @@
         height: 100%;
         overflow: hidden;
         border-radius: 8px;
+
+        @media (max-width: $m-laptop) {
+            height: auto;
+        }
 
         img {
             width: 100%;
@@ -111,6 +179,10 @@
             -webkit-transition: all $transitions;
             -o-transition: all $transitions;
             transition: all $transitions;
+
+            @media (max-width: $m-laptop) {
+                height: auto;
+            }
         }
 
         &:hover img {

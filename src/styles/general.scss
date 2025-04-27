@@ -143,6 +143,9 @@ body {
 }
 
 .ak-section {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
     padding: 32px 0;
 
     &__container {
@@ -151,11 +154,24 @@ body {
         -webkit-box-align: stretch;
         align-items: stretch;
         gap: 64px;
+
+        @media (max-width: $m-laptop) {
+            flex-direction: column;
+            gap: 32px;
+        }
     }
 
     &__sidebar {
         -webkit-box-flex: 0;
         flex: 0 0 200px;
+
+        @media (max-width: $m-lg) {
+            flex-basis: 130px;
+        }
+
+        @media (max-width: $m-laptop) {
+            flex-basis: auto;
+        }
     }
 
     &__sticky {
@@ -192,12 +208,12 @@ body {
     margin: 0 auto;
     padding: 0 64px;
 
-    @media (max-width: $m-laptop) {
-        max-width: calc(100% - 32px * 2);
+    @media (max-width: $m-lg) {
+        padding: 0 32px;
     }
 
-    @media (max-width: $m-tablet) {
-        max-width: calc(100% - 16px * 2);
+    @media (max-width: $m-mobile) {
+        padding: 0 10px;
     }
 }
 

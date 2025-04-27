@@ -4,6 +4,223 @@ include ../components/p-block/index.pug
     .ak-container.ak-section__container
         .ak-section__sidebar
             .ak-section__sticky
+                .ak-section__title 2025
+        .ak-section__content
+            +p-block({
+                title: 'Weather',
+                tags: [
+                    'React',
+                    'SCSS',
+                    'fetch API'
+                ],
+                description: 'Pet-проект направленный на тренировку навыков в React. <br><br>Приложение отображает текущую погоду. Умеет определять город пользователя по геолокации. Имеет функцию поиска города вручную. Показывает температуру по Цельсию и по Фарингейту. Сохраняет информацию о пользователе в LocalStorage',
+                items: [
+                    {
+                        title: 'Перейти на сайт',
+                        link: 'https://agamawd.github.io/weather_react/',
+                        desc: ''
+                    }
+                ],
+                galleryPreview: 'assets/images/projects/weather/weather_preview.webp',
+                galleryImages: [
+                    {
+                        media: 'assets/images/projects/weather/weather_1.webp',
+                        thumb: 'assets/images/projects/weather/weather_1.webp'
+                    },
+                    {
+                        media: 'assets/images/projects/weather/weather_2.webp',
+                        thumb: 'assets/images/projects/weather/weather_2.webp'
+                    },
+                    {
+                        media: 'assets/images/projects/weather/weather_3.webp',
+                        thumb: 'assets/images/projects/weather/weather_3.webp'
+                    }
+                ],
+                galleryName: 'weather'
+            })
+
+            +p-block({
+                title: 'Скоро релиз',
+                tags: [],
+                items: [
+                    {
+                        title: 'Точприбор',
+                        link: 'javascript:void(0);',
+                        desc: 'Сайт завода испытательных приборов. Стек: pug, SASS, JS, jQuery'
+                    },
+                    {
+                        title: 'ХАУ',
+                        link: 'javascript:void(0);',
+                        desc: 'Сайт Херсонского Аграгного Университета. Стек: pug, SASS, JS, jQuery'
+                    },
+                    {
+                        title: 'Interiors',
+                        link: 'javascript:void(0);',
+                        desc: 'Сайт студии дизайна интерьеров. Стек: pug, SASS, JS, GSAP, jQuery'
+                    }
+                ],
+                galleryPreview: '',
+                galleryImages: [{}],
+                galleryName: ''
+            })
+
+    .ak-container.ak-section__container
+        .ak-section__sidebar
+            .ak-section__sticky
+                .ak-section__title 2024
+        .ak-section__content
+            +p-block({
+                title: 'SKY FISH',
+                tags: [
+                    'Pug',
+                    'SCSS',
+                    'Vanilla JS',
+                    'GSAP',
+                    'jQuery'
+                ],
+                description: 'Сайт компании добывающей продающей морепродукты.<br><br>Я пришёл в проект когда он уже был сделан процентов на 40. Всё остальное делал я. На большинстве страниц присутсвует анимация при скролле.',
+                items: [
+                    {
+                        title: 'Перейти на сайт',
+                        link: 'https://fishmarket.ru/about/',
+                        desc: 'Эту страницу и несколько других верстал и анимировал с нуля.'
+                    }
+                ],
+                galleryPreview: '',
+                galleryImages: [{}],
+                galleryName: 'skyfish'
+            })
+
+            +p-block({
+                title: 'ОСК',
+                tags: [
+                    'Pug',
+                    'SCSS',
+                    'Vanilla JS',
+                    'jQuery'
+                ],
+                description: 'Сайт компании ОСК (Объединенная сервисная компания) занимающейся проектированием, изготовлением, монтажом, наладкой, обслуживанием и ремонтом оборудования промышленных предприятий.<br><br>Свёрстан весь сайт с нуля под Битрикс.',
+                items: [
+                    {
+                        title: 'Перейти на сайт',
+                        link: 'https://usc-service.ru/',
+                        desc: ''
+                    }
+                ],
+                galleryPreview: '',
+                galleryImages: [{}],
+                galleryName: 'osk'
+            })
+
+            +p-block({
+                title: 'Русский завтрак',
+                tags: [
+                    'Pug',
+                    'SCSS',
+                    'Vanilla JS',
+                    'fetch API'
+                ],
+                description: 'Сайт проекта Русский завтрак, призванного познакомить пользователей с современной русской кухней и сделать её основой сферы гостеприимства.<br><br>Сайт работате без CMS, поэтому вся информация получается по API в виде JSON и затем отрисовывается на странице при помощи JS. Функциональная часть, включая пагинацию, фильтрацию и т.д., также реализована на фронте.',
+                items: [
+                    {
+                        title: 'Перейти на сайт',
+                        link: 'https://russkiyzavtrak.ru/',
+                        desc: ''
+                    }
+                ],
+                galleryPreview: 'assets/images/projects/russian-breakfast/rb_preview.webp',
+                galleryImages: [
+                    {
+                        media: 'assets/images/projects/russian-breakfast/rb_1.webp',
+                        thumb: 'assets/images/projects/russian-breakfast/rb_1.webp'
+                    },
+                    {
+                        media: 'assets/images/projects/russian-breakfast/rb_2.webp',
+                        thumb: 'assets/images/projects/russian-breakfast/rb_2.webp'
+                    },
+                    {
+                        media: 'assets/images/projects/russian-breakfast/rb_3.webp',
+                        thumb: 'assets/images/projects/russian-breakfast/rb_3.webp'
+                    },
+                    {
+                        media: 'assets/video/projects/russian-breakfast/rb.mp4',
+                        thumb: 'assets/images/projects/russian-breakfast/rb_4.webp'
+                    }
+                ],
+                galleryName: 'russianBreakfast'
+            })
+
+            +p-block({
+                title: 'Hakort',
+                tags: [
+                    'Pug',
+                    'SCSS',
+                    'Vanilla JS',
+                    'GSAP',
+                    'jQuery'
+                ],
+                description: 'Лендинг российского представаительства магазина автозапчастей. <br><br>Весь сайт построен с анимацией (GSAP) зависящей от скролла.',
+                items: [
+                    {
+                        title: 'Перейти на сайт',
+                        link: 'https://hakort.ru/',
+                        desc: ''
+                    },
+                    {
+                        title: 'Cтраница на Github Pages',
+                        link: 'https://frontmd.github.io/hakort/dist/home.html',
+                        desc: 'Основной сайт часто бывает недоступен (по независящим от меня причинам), поэтому тут дополнительная ссылка'
+                    }
+                ],
+                galleryPreview: '',
+                galleryImages: [{}],
+                galleryName: 'hakort'
+            })
+
+            +p-block({
+                title: 'Календарь событий',
+                tags: [
+                    'HTML',
+                    'CSS',
+                    'Vanilla JS',
+                ],
+                description: 'Календарь событий медиахолдинга.<br><br>Весь фронт строится из JSON. Поэтому сортировка, переключение вида и фильтры так же работают на JS. Фильтры строятся автоматически на основании параметров приходящих в JSON, что позволяет легко масштабироваться управляя данными и не копаясь в коде.',
+                items: [
+                    {
+                        title: 'Смотреть страницу',
+                        link: 'https://calendar.sholding.ru/',
+                        desc: ''
+                    },
+                ],
+                galleryPreview: '',
+                galleryImages: [{}],
+                galleryName: 'eventsCalendar'
+            })
+
+            +p-block({
+                title: 'Калькулятор на React',
+                tags: [
+                    'React',
+                    'CSS',
+                    'Chart.js',
+                    'Framer'
+                ],
+                description: 'Калькулятор окупаемости газопоршневых установок.<br><br>Само приложение не большое, просто форма с валидацией, но внутренние рассчёты довольно большие. Результат помимо таблиц содержит диаграммы постороенные на базе этих таблиц. <br><br>Дополнительная сложность была в том что нужно было написать React компонент встраиваемый в конструктор Framer. Это наложило некоторые ограничения, которые пришлось обходить.',
+                items: [
+                    {
+                        title: 'Смотреть страницу',
+                        link: 'https://liyuenergy.ru/calculator',
+                        desc: ''
+                    },
+                ],
+                galleryPreview: '',
+                galleryImages: [{}],
+                galleryName: 'calculatorReact'
+            })
+
+    .ak-container.ak-section__container
+        .ak-section__sidebar
+            .ak-section__sticky
                 .ak-section__title 2023
         .ak-section__content
             +p-block({
@@ -14,6 +231,7 @@ include ../components/p-block/index.pug
                     'Vanilla JS',
                     'GSAP'
                 ],
+                description: 'Сайт производителя промышленого оборудования.',
                 items: [
                     {
                         title: 'Главная страница',
@@ -26,10 +244,28 @@ include ../components/p-block/index.pug
                         desc: 'Делал не одну страницу на этом сайте. Из интересного хочу показать эту. Реализована так же с помощью GSAP.'
                     }
                 ],
-                galleryPreview: 'assets/images/projects/meridian/meridian_preview.png',
+                galleryPreview: 'assets/images/projects/meridian/meridian_preview.webp',
                 galleryImages: [
-                    'assets/images/projects/meridian/meridian_1.jpg',
-                    'assets/images/projects/meridian/meridian_2.jpg'
+                    {
+                        media: 'assets/images/projects/meridian/meridian_1.webp',
+                        thumb: 'assets/images/projects/meridian/meridian_1.webp'
+                    },
+                    {
+                        media: 'assets/video/projects/meridian/meridian_main.mp4',
+                        thumb: 'assets/images/projects/meridian/meridian_1.webp'
+                    },
+                    {
+                        media: 'assets/images/projects/meridian/meridian_2.webp',
+                        thumb: 'assets/images/projects/meridian/meridian_2.webp'
+                    },
+                    {
+                        media: 'assets/images/projects/meridian/meridian_3.webp',
+                        thumb: 'assets/images/projects/meridian/meridian_3.webp'
+                    },
+                    {
+                        media: 'assets/video/projects/meridian/meridian_inner.mp4',
+                        thumb: 'assets/images/projects/meridian/meridian_3.webp'
+                    },
                 ],
                 galleryName: 'meridian'
             })
@@ -47,16 +283,33 @@ include ../components/p-block/index.pug
                     {
                         title: 'Главная страница',
                         link: 'https://bike-centre.ru/',
-                        desc: 'Тут можно посмотреть меню которое открывается кнопкой "Каталог" - полностью моя работа. большинство блоков я тоже переделывал, но они не столь интересны.'
+                        desc: 'Тут можно посмотреть меню которое открывается кнопкой "Каталог" - делал с нуля. большинство блоков я тоже переделывал, но они не столь интересны.'
                     },
                     {
                         title: 'Trade-in',
                         link: 'https://bike-centre.ru/trade-in/',
-                        desc: 'Это пример страницы которую с нуля делал. Из интересного форма с драг-н-дропом и валидацией.'
+                        desc: 'Это пример страницы которую полностью с нуля делал. Из интересного форма с драг-н-дропом и валидацией.'
                     }
                 ],
-                galleryPreview: '',
-                galleryImages: [],
+                galleryPreview: 'assets/images/projects/bikecentre/bikecentre_preview.webp',
+                galleryImages: [
+                    {
+                        media: 'assets/images/projects/bikecentre/bikecentre_1.webp',
+                        thumb: 'assets/images/projects/bikecentre/bikecentre_1.webp'
+                    },
+                    {
+                        media: 'assets/video/projects/bikecentre/bikecentre_form.mp4',
+                        thumb: 'assets/images/projects/bikecentre/bikecentre_1.webp'
+                    },
+                    {
+                        media: 'assets/images/projects/bikecentre/bikecentre_2.webp',
+                        thumb: 'assets/images/projects/bikecentre/bikecentre_2.webp'
+                    },
+                    {
+                        media: 'assets/video/projects/bikecentre/bikecentre_catalog.mp4',
+                        thumb: 'assets/images/projects/bikecentre/bikecentre_2.webp'
+                    }
+                ],
                 galleryName: 'bikecentre'
             })
 
