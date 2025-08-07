@@ -38,27 +38,31 @@ include ../components/p-block/index.pug
                         desc: 'Весь сайт получился интересным, так что вот список страниц)'
                     }
                 ],
-                galleryPreview: 'images/projects/toohcpribor/adele_preview.webp',
+                galleryPreview: 'images/projects/tochpribor/tochpribor_preview.webp',
                 galleryImages: [
                     {
-                        media: 'images/projects/toohcpribor/adele_1.webp',
-                        thumb: 'images/projects/toohcpribor/adele_1.webp'
+                        media: 'images/projects/tochpribor/tochpribor_1.webp',
+                        thumb: 'images/projects/tochpribor/tochpribor_1.webp'
                     },
                     {
-                        media: 'video/projects/toohcpribor/adele.mp4',
-                        thumb: 'images/projects/toohcpribor/adele_poster.webp'
+                        media: 'video/projects/tochpribor/tochpribor_home.mp4',
+                        thumb: 'images/projects/tochpribor/tochpribor_home.webp'
                     },
                     {
-                        media: 'images/projects/toohcpribor/adele_2.webp',
-                        thumb: 'images/projects/toohcpribor/adele_2.webp'
+                        media: 'video/projects/tochpribor/tochpribor_ref.mp4',
+                        thumb: 'images/projects/tochpribor/tochpribor_ref.webp'
                     },
                     {
-                        media: 'images/projects/toohcpribor/adele_3.webp',
-                        thumb: 'images/projects/toohcpribor/adele_3.webp'
+                        media: 'video/projects/tochpribor/tochpribor_about.mp4',
+                        thumb: 'images/projects/tochpribor/tochpribor_about.webp'
                     },
                     {
-                        media: 'video/projects/toohcpribor/adele_mob.mp4',
-                        thumb: 'images/projects/toohcpribor/adele_4.webp'
+                        media: 'images/projects/tochpribor/tochpribor_2.webp',
+                        thumb: 'images/projects/tochpribor/tochpribor_2.webp'
+                    },
+                    {
+                        media: 'images/projects/tochpribor/tochpribor_3.webp',
+                        thumb: 'images/projects/tochpribor/tochpribor_3.webp'
                     },
                 ],
                 galleryName: 'tochpribor'
@@ -151,17 +155,34 @@ include ../components/p-block/index.pug
                 description: 'Сайт студии дизайна интерьеров. Весь построен с анимацией зависящей от скролла (GSAP). <br><br>Свёрстан с нуля под натяжку на CMS Bitrix.',
                 items: [
                     {
-                        title: 'Перейти на сайт',
+                        title: 'Главная',
                         link: 'https://arinavolkova.ru/',
                         desc: ''
                     }
                 ],
-                galleryPreview: '',
-                galleryImages: [],
+                galleryPreview: 'images/projects/interiors/interiors_preview.webp',
+                galleryImages: [
+                    {
+                        media: 'images/projects/interiors/interiors_1.webp',
+                        thumb: 'images/projects/interiors/interiors_1.webp'
+                    },
+                    {
+                        media: 'video/projects/interiors/interiors.mp4',
+                        thumb: 'images/projects/interiors/interiors_poster.webp'
+                    },
+                    {
+                        media: 'images/projects/interiors/interiors_2.webp',
+                        thumb: 'images/projects/interiors/interiors_2.webp'
+                    },
+                    {
+                        media: 'images/projects/interiors/interiors_3.webp',
+                        thumb: 'images/projects/interiors/interiors_3.webp'
+                    }
+                ],
                 galleryName: 'vi-interiors'
             })
 
-            +p-block({
+            //-+p-block({
                 title: 'Скоро релиз',
                 tags: [],
                 items: [
@@ -179,7 +200,7 @@ include ../components/p-block/index.pug
                 galleryPreview: '',
                 galleryImages: [{}],
                 galleryName: ''
-            })
+            //-})
 
     .ak-container.ak-section__container
         .ak-section__sidebar
@@ -198,7 +219,7 @@ include ../components/p-block/index.pug
                 description: 'Сайт компании добывающей продающей морепродукты.<br><br>Я пришёл в проект когда он уже был сделан процентов на 40. Всё остальное делал я. На большинстве страниц присутсвует анимация при скролле.',
                 items: [
                     {
-                        title: 'Перейти на сайт',
+                        title: 'Страница О компании',
                         link: 'https://fishmarket.ru/about/',
                         desc: 'Эту страницу и несколько других верстал и анимировал с нуля.'
                     }
@@ -219,7 +240,7 @@ include ../components/p-block/index.pug
                 description: 'Сайт компании ОСК (Объединенная сервисная компания) занимающейся проектированием, изготовлением, монтажом, наладкой, обслуживанием и ремонтом оборудования промышленных предприятий.<br><br>Свёрстан весь сайт с нуля под Битрикс.',
                 items: [
                     {
-                        title: 'Перейти на сайт',
+                        title: 'Главная',
                         link: 'https://usc-service.ru/',
                         desc: ''
                     }
@@ -240,7 +261,7 @@ include ../components/p-block/index.pug
                 description: 'Сайт проекта Русский завтрак, призванного познакомить пользователей с современной русской кухней и сделать её основой сферы гостеприимства.<br><br>Сайт работате без CMS, поэтому вся информация получается по API в виде JSON и затем отрисовывается на странице при помощи JS. Функциональная часть, включая пагинацию, фильтрацию и т.д., также реализована на фронте.',
                 items: [
                     {
-                        title: 'Перейти на сайт',
+                        title: 'Главная',
                         link: 'https://russkiyzavtrak.ru/',
                         desc: ''
                     }
@@ -284,8 +305,25 @@ include ../components/p-block/index.pug
                         desc: 'сайт часто бывает недоступен, по независящим от меня причинам. В галерее есть видео, с полным скроллом.'
                     }
                 ],
-                galleryPreview: '',
-                galleryImages: [{}],
+                galleryPreview: 'images/projects/hakort/hakort_preview.webp',
+                galleryImages: [
+                    {
+                        media: 'video/projects/hakort/hakort.mp4',
+                        thumb: 'images/projects/hakort/hakort_poster.webp'
+                    },
+                    {
+                        media: 'images/projects/hakort/hakort_1.webp',
+                        thumb: 'images/projects/hakort/hakort_1.webp'
+                    },
+                    {
+                        media: 'images/projects/hakort/hakort_2.webp',
+                        thumb: 'images/projects/hakort/hakort_2.webp'
+                    },
+                    {
+                        media: 'images/projects/hakort/hakort_3.webp',
+                        thumb: 'images/projects/hakort/hakort_3.webp'
+                    }
+                ],
                 galleryName: 'hakort'
             })
 
