@@ -1,0 +1,56 @@
+.ak-footer {
+    background-color: $c-accent;
+    padding: 48px 0;
+
+    @media (max-width: $m-mobile) {
+        padding: 32px 0;
+    }
+
+    &__container {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        align-items: center;
+
+        @media (max-width: $m-tablet) {
+            align-items: flex-end;
+        }
+
+        @media (max-width: $m-mobile) {
+            align-items: center;
+            flex-direction: column-reverse;
+            gap: 16px;
+        }
+    }
+
+    &__contacts {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        gap: 32px;
+
+        @media (max-width: $m-tablet) {
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-end;
+        }
+
+        @media (max-width: $m-mobile) {
+            align-items: center;
+        }
+    }
+
+    &__link {
+        color: $c-white;
+        -webkit-transition: color $transitions;
+        -o-transition: color $transitions;
+        transition: color $transitions;
+
+        &:hover {
+            color: $c-bg;
+        }
+    }
+}

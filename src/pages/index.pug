@@ -1,0 +1,492 @@
+include ../components/p-block/index.pug
+
+.ak-section
+    .ak-container.ak-section__container
+        .ak-section__sidebar
+            .ak-section__sticky
+                .ak-section__title 2025
+        .ak-section__content
+            +p-block({
+                title: 'Завод Точприбор',
+                tags: [
+                    'PUG',
+                    'SCSS',
+                    'Vanilla JS',
+                    'Lottie.js',
+                    'GSAP'
+                ],
+                description: 'Сайт завода испытательных приборов - Точприбор',
+                items: [
+                    {
+                        title: 'Главная',
+                        link: 'https://tochpribor.ru/',
+                        desc: 'Из интересного на этой странице - на первом экране Lottie анимация работает в связке со слайдером. Анимация подвала работает на GSAP'
+                    },
+                    {
+                        title: 'Референции',
+                        link: 'https://tochpribor.ru/references/',
+                        desc: 'Весь функционал (выбор страны, региона, фильтрация точек на карте и т.д.) страницы полностью написан на чистом JS, на входе JSON с данными.'
+                    },
+                    {
+                        title: 'О заводе',
+                        link: 'https://tochpribor.ru/nashe-proizvodstvo/',
+                        desc: 'Тут из интересного схема завода (виртуальная экскурсия) с точками, привязанными к разделам подробного описания участков.'
+                    },
+                    {
+                        title: 'Карта сайта',
+                        link: 'https://tochpribor.ru/sitemap/',
+                        desc: 'Весь сайт получился интересным, так что вот список страниц)'
+                    }
+                ],
+                galleryPreview: 'images/projects/toohcpribor/adele_preview.webp',
+                galleryImages: [
+                    {
+                        media: 'images/projects/toohcpribor/adele_1.webp',
+                        thumb: 'images/projects/toohcpribor/adele_1.webp'
+                    },
+                    {
+                        media: 'video/projects/toohcpribor/adele.mp4',
+                        thumb: 'images/projects/toohcpribor/adele_poster.webp'
+                    },
+                    {
+                        media: 'images/projects/toohcpribor/adele_2.webp',
+                        thumb: 'images/projects/toohcpribor/adele_2.webp'
+                    },
+                    {
+                        media: 'images/projects/toohcpribor/adele_3.webp',
+                        thumb: 'images/projects/toohcpribor/adele_3.webp'
+                    },
+                    {
+                        media: 'video/projects/toohcpribor/adele_mob.mp4',
+                        thumb: 'images/projects/toohcpribor/adele_4.webp'
+                    },
+                ],
+                galleryName: 'tochpribor'
+            })
+            +p-block({
+                title: 'Онлайн-гимназия Адель',
+                tags: [
+                    'PUG',
+                    'SCSS',
+                    'Vanilla JS',
+                    'jQuery'
+                ],
+                description: 'Сайт онлайн-гимназии Адель',
+                items: [
+                    {
+                        title: 'Перейти на сайт',
+                        link: 'https://adeleschool.ru/',
+                        desc: ''
+                    }
+                ],
+                galleryPreview: 'images/projects/adele/adele_preview.webp',
+                galleryImages: [
+                    {
+                        media: 'images/projects/adele/adele_1.webp',
+                        thumb: 'images/projects/adele/adele_1.webp'
+                    },
+                    {
+                        media: 'video/projects/adele/adele.mp4',
+                        thumb: 'images/projects/adele/adele_poster.webp'
+                    },
+                    {
+                        media: 'images/projects/adele/adele_2.webp',
+                        thumb: 'images/projects/adele/adele_2.webp'
+                    },
+                    {
+                        media: 'images/projects/adele/adele_3.webp',
+                        thumb: 'images/projects/adele/adele_3.webp'
+                    },
+                    {
+                        media: 'video/projects/adele/adele_mob.mp4',
+                        thumb: 'images/projects/adele/adele_4.webp'
+                    },
+                ],
+                galleryName: 'adele'
+            })
+            +p-block({
+                title: 'Weather',
+                tags: [
+                    'React',
+                    'SCSS',
+                    'fetch API'
+                ],
+                description: 'Pet-проект направленный на тренировку навыков в React. <br><br>Приложение отображает текущую погоду. Умеет определять город пользователя по геолокации. Имеет функцию поиска города вручную. Показывает температуру по Цельсию и по Фарингейту. Сохраняет информацию о пользователе в LocalStorage',
+                items: [
+                    {
+                        title: 'Перейти на сайт',
+                        link: 'https://agamawd.github.io/weather_react/',
+                        desc: ''
+                    }
+                ],
+                galleryPreview: 'images/projects/weather/weather_preview.webp',
+                galleryImages: [
+                    {
+                        media: 'images/projects/weather/weather_1.webp',
+                        thumb: 'images/projects/weather/weather_1.webp'
+                    },
+                    {
+                        media: 'video/projects/weather/weather.mp4',
+                        thumb: 'images/projects/weather/weather_poster.webp'
+                    },
+                    {
+                        media: 'images/projects/weather/weather_2.webp',
+                        thumb: 'images/projects/weather/weather_2.webp'
+                    },
+                    {
+                        media: 'images/projects/weather/weather_3.webp',
+                        thumb: 'images/projects/weather/weather_3.webp'
+                    }
+                ],
+                galleryName: 'weather'
+            })
+            +p-block({
+                title: 'Vi Interiors',
+                tags: [
+                    'PUG',
+                    'SCSS',
+                    'Vanilla JS',
+                    'GSAP'
+                ],
+                description: 'Сайт студии дизайна интерьеров. Весь построен с анимацией зависящей от скролла (GSAP). <br><br>Свёрстан с нуля под натяжку на CMS Bitrix.',
+                items: [
+                    {
+                        title: 'Перейти на сайт',
+                        link: 'https://arinavolkova.ru/',
+                        desc: ''
+                    }
+                ],
+                galleryPreview: '',
+                galleryImages: [],
+                galleryName: 'vi-interiors'
+            })
+
+            +p-block({
+                title: 'Скоро релиз',
+                tags: [],
+                items: [
+                    {
+                        title: 'ХАУ',
+                        link: 'javascript:void(0);',
+                        desc: 'Сайт Херсонского Аграгного Университета. Стек: pug, SСSS, JS, jQuery'
+                    },
+                    {
+                        title: 'Frank Auto',
+                        link: 'javascript:void(0);',
+                        desc: 'Сайт автодиллера Frank Auto: PUG, SСSS, JS, jQuery'
+                    }
+                ],
+                galleryPreview: '',
+                galleryImages: [{}],
+                galleryName: ''
+            })
+
+    .ak-container.ak-section__container
+        .ak-section__sidebar
+            .ak-section__sticky
+                .ak-section__title 2024
+        .ak-section__content
+            +p-block({
+                title: 'SKY FISH',
+                tags: [
+                    'Pug',
+                    'SCSS',
+                    'Vanilla JS',
+                    'GSAP',
+                    'jQuery'
+                ],
+                description: 'Сайт компании добывающей продающей морепродукты.<br><br>Я пришёл в проект когда он уже был сделан процентов на 40. Всё остальное делал я. На большинстве страниц присутсвует анимация при скролле.',
+                items: [
+                    {
+                        title: 'Перейти на сайт',
+                        link: 'https://fishmarket.ru/about/',
+                        desc: 'Эту страницу и несколько других верстал и анимировал с нуля.'
+                    }
+                ],
+                galleryPreview: '',
+                galleryImages: [{}],
+                galleryName: 'skyfish'
+            })
+
+            +p-block({
+                title: 'ОСК',
+                tags: [
+                    'Pug',
+                    'SCSS',
+                    'Vanilla JS',
+                    'jQuery'
+                ],
+                description: 'Сайт компании ОСК (Объединенная сервисная компания) занимающейся проектированием, изготовлением, монтажом, наладкой, обслуживанием и ремонтом оборудования промышленных предприятий.<br><br>Свёрстан весь сайт с нуля под Битрикс.',
+                items: [
+                    {
+                        title: 'Перейти на сайт',
+                        link: 'https://usc-service.ru/',
+                        desc: ''
+                    }
+                ],
+                galleryPreview: '',
+                galleryImages: [{}],
+                galleryName: 'osk'
+            })
+
+            +p-block({
+                title: 'Русский завтрак',
+                tags: [
+                    'Pug',
+                    'SCSS',
+                    'Vanilla JS',
+                    'fetch API'
+                ],
+                description: 'Сайт проекта Русский завтрак, призванного познакомить пользователей с современной русской кухней и сделать её основой сферы гостеприимства.<br><br>Сайт работате без CMS, поэтому вся информация получается по API в виде JSON и затем отрисовывается на странице при помощи JS. Функциональная часть, включая пагинацию, фильтрацию и т.д., также реализована на фронте.',
+                items: [
+                    {
+                        title: 'Перейти на сайт',
+                        link: 'https://russkiyzavtrak.ru/',
+                        desc: ''
+                    }
+                ],
+                galleryPreview: 'images/projects/russian-breakfast/rb_preview.webp',
+                galleryImages: [
+                    {
+                        media: 'images/projects/russian-breakfast/rb_1.webp',
+                        thumb: 'images/projects/russian-breakfast/rb_1.webp'
+                    },
+                    {
+                        media: 'images/projects/russian-breakfast/rb_2.webp',
+                        thumb: 'images/projects/russian-breakfast/rb_2.webp'
+                    },
+                    {
+                        media: 'images/projects/russian-breakfast/rb_3.webp',
+                        thumb: 'images/projects/russian-breakfast/rb_3.webp'
+                    },
+                    {
+                        media: 'video/projects/russian-breakfast/rb.mp4',
+                        thumb: 'images/projects/russian-breakfast/rb_4.webp'
+                    }
+                ],
+                galleryName: 'russianBreakfast'
+            })
+
+            +p-block({
+                title: 'Hakort',
+                tags: [
+                    'Pug',
+                    'SCSS',
+                    'Vanilla JS',
+                    'GSAP',
+                    'jQuery'
+                ],
+                description: 'Лендинг российского представаительства магазина автозапчастей. <br><br>Весь сайт построен с анимацией (GSAP) зависящей от скролла.',
+                items: [
+                    {
+                        title: 'Перейти на сайт',
+                        link: 'https://hakort.ru/',
+                        desc: 'сайт часто бывает недоступен, по независящим от меня причинам. В галерее есть видео, с полным скроллом.'
+                    }
+                ],
+                galleryPreview: '',
+                galleryImages: [{}],
+                galleryName: 'hakort'
+            })
+
+            +p-block({
+                title: 'Календарь событий',
+                tags: [
+                    'HTML',
+                    'CSS',
+                    'Vanilla JS',
+                ],
+                description: 'Календарь событий медиахолдинга.<br><br>Весь фронт строится из JSON. Поэтому сортировка, переключение вида и фильтры так же работают на JS. Фильтры строятся автоматически на основании параметров приходящих в JSON, что позволяет легко масштабироваться управляя данными и не копаясь в коде.',
+                items: [
+                    {
+                        title: 'Смотреть страницу',
+                        link: 'https://calendar.sholding.ru/',
+                        desc: ''
+                    },
+                ],
+                galleryPreview: '',
+                galleryImages: [{}],
+                galleryName: 'eventsCalendar'
+            })
+
+            +p-block({
+                title: 'Калькулятор на React',
+                tags: [
+                    'React',
+                    'CSS',
+                    'Chart.js',
+                    'Framer'
+                ],
+                description: 'Калькулятор окупаемости газопоршневых установок.<br><br>Само приложение не большое, просто форма с валидацией, но внутренние рассчёты довольно большие. Результат помимо таблиц содержит диаграммы постороенные на базе этих таблиц. <br><br>Дополнительная сложность была в том что нужно было написать React компонент встраиваемый в конструктор Framer. Это наложило некоторые ограничения, которые пришлось обходить.',
+                items: [
+                    {
+                        title: 'Смотреть страницу',
+                        link: 'https://liyuenergy.ru/calculator',
+                        desc: ''
+                    },
+                ],
+                galleryPreview: '',
+                galleryImages: [{}],
+                galleryName: 'calculatorReact'
+            })
+
+    .ak-container.ak-section__container
+        .ak-section__sidebar
+            .ak-section__sticky
+                .ak-section__title 2023
+        .ak-section__content
+            +p-block({
+                title: 'Меридиан',
+                tags: [
+                    'Pug',
+                    'SCSS',
+                    'Vanilla JS',
+                    'GSAP'
+                ],
+                description: 'Сайт производителя промышленого оборудования.',
+                items: [
+                    {
+                        title: 'Главная страница',
+                        link: 'https://meridiant.ru/',
+                        desc: 'Вообще сайт разрабатывался в команде, я тут делал блок отрасли и блок услуги. Использовал GSAP-анимацию и canvas. Фильтры на js самописные'
+                    },
+                    {
+                        title: 'Внутренние страницы',
+                        link: 'https://meridiant.ru/services/supply-of-components/',
+                        desc: 'Делал не одну страницу на этом сайте. Из интересного хочу показать эту. Реализована так же с помощью GSAP.'
+                    }
+                ],
+                galleryPreview: 'images/projects/meridian/meridian_preview.webp',
+                galleryImages: [
+                    {
+                        media: 'images/projects/meridian/meridian_1.webp',
+                        thumb: 'images/projects/meridian/meridian_1.webp'
+                    },
+                    {
+                        media: 'video/projects/meridian/meridian_main.mp4',
+                        thumb: 'images/projects/meridian/meridian_1.webp'
+                    },
+                    {
+                        media: 'images/projects/meridian/meridian_2.webp',
+                        thumb: 'images/projects/meridian/meridian_2.webp'
+                    },
+                    {
+                        media: 'images/projects/meridian/meridian_3.webp',
+                        thumb: 'images/projects/meridian/meridian_3.webp'
+                    },
+                    {
+                        media: 'video/projects/meridian/meridian_inner.mp4',
+                        thumb: 'images/projects/meridian/meridian_3.webp'
+                    },
+                ],
+                galleryName: 'meridian'
+            })
+
+            +p-block({
+                title: 'Байк центр',
+                tags: [
+                    'HTML',
+                    'CSS',
+                    'Vanilla JS',
+                    'PHP'
+                ],
+                description: 'Интернет-магазин спортивных товаров на Битриксе. В проект я пришёл когда он уже был натянут на CMS и работал, поэтому вёрстку правил прям в PHP-шаблонах. Моей задачей была перевёрстка под новый дизайн, правки старых багов и вёрстка новых страниц.',
+                items: [
+                    {
+                        title: 'Главная страница',
+                        link: 'https://bike-centre.ru/',
+                        desc: 'Тут можно посмотреть меню которое открывается кнопкой "Каталог" - делал с нуля. большинство блоков я тоже переделывал, но они не столь интересны.'
+                    },
+                    {
+                        title: 'Trade-in',
+                        link: 'https://bike-centre.ru/trade-in/',
+                        desc: 'Это пример страницы которую полностью с нуля делал. Из интересного форма с драг-н-дропом и валидацией.'
+                    }
+                ],
+                galleryPreview: 'images/projects/bikecentre/bikecentre_preview.webp',
+                galleryImages: [
+                    {
+                        media: 'images/projects/bikecentre/bikecentre_1.webp',
+                        thumb: 'images/projects/bikecentre/bikecentre_1.webp'
+                    },
+                    {
+                        media: 'video/projects/bikecentre/bikecentre_form.mp4',
+                        thumb: 'images/projects/bikecentre/bikecentre_1.webp'
+                    },
+                    {
+                        media: 'images/projects/bikecentre/bikecentre_2.webp',
+                        thumb: 'images/projects/bikecentre/bikecentre_2.webp'
+                    },
+                    {
+                        media: 'video/projects/bikecentre/bikecentre_catalog.mp4',
+                        thumb: 'images/projects/bikecentre/bikecentre_2.webp'
+                    }
+                ],
+                galleryName: 'bikecentre'
+            })
+
+            +p-block({
+                title: 'Душись',
+                tags: [
+                    'HTML',
+                    'SCSS',
+                    'Vanilla JS',
+                ],
+                description: 'Магазин селективных ароматов. Анимация сделана на AOS.js',
+                items: [
+                    {
+                        title: 'Главная страница',
+                        link: 'https://dushis.store/',
+                        desc: ''
+                    },
+                ],
+                galleryPreview: 'images/projects/dushis/dushis_preview.webp',
+                galleryImages: [
+                    {
+                        media: 'images/projects/dushis/dushis_1.webp',
+                        thumb: 'images/projects/dushis/dushis_1.webp'
+                    },
+                    {
+                        media: 'video/projects/dushis/dushis.mp4',
+                        thumb: 'images/projects/dushis/dushis_poster.webp'
+                    },
+                    {
+                        media: 'images/projects/dushis/dushis_2.webp',
+                        thumb: 'images/projects/dushis/dushis_2.webp'
+                    },
+                    {
+                        media: 'images/projects/dushis/dushis_3.webp',
+                        thumb: 'images/projects/dushis/dushis_3.webp'
+                    },
+                    {
+                        media: 'images/projects/dushis/dushis_4.webp',
+                        thumb: 'images/projects/dushis/dushis_4.webp'
+                    },
+                    {
+                        media: 'images/projects/dushis/dushis_5.webp',
+                        thumb: 'images/projects/dushis/dushis_5.webp'
+                    },
+                    {
+                        media: 'images/projects/dushis/dushis_6.webp',
+                        thumb: 'images/projects/dushis/dushis_6.webp'
+                    },
+                    {
+                        media: 'images/projects/dushis/dushis_7.webp',
+                        thumb: 'images/projects/dushis/dushis_7.webp'
+                    },
+                    {
+                        media: 'images/projects/dushis/dushis_8.webp',
+                        thumb: 'images/projects/dushis/dushis_8.webp'
+                    },
+                    {
+                        media: 'images/projects/dushis/dushis_9.webp',
+                        thumb: 'images/projects/dushis/dushis_9.webp'
+                    },
+                    {
+                        media: 'images/projects/dushis/dushis_10.webp',
+                        thumb: 'images/projects/dushis/dushis_10.webp'
+                    },
+                ],
+                galleryName: 'dushis'
+            })
+

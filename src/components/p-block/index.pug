@@ -1,0 +1,61 @@
+-
+    const defaultPBlockProps = {
+        classes: '',
+        title: '',
+        tags: [],
+        description: '',
+        items: {},
+        galleryPreview: '',
+        galleryImages: [],
+        galleryName: '',
+    }
+
+mixin p-block(props = defaultImagesGridProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultPBlockProps.classes,
+            title: props.title ? props.title : defaultPBlockProps.title,
+            tags: props.tags ? props.tags : defaultPBlockProps.tags,
+            description: props.description ? props.description : defaultPBlockProps.description,
+            items: props.items ? props.items : defaultPBlockProps.items,
+            galleryPreview: props.galleryPreview ? props.galleryPreview : defaultPBlockProps.galleryPreview,
+            galleryImages: props.galleryImages ? props.galleryImages : defaultPBlockProps.galleryImages,
+            galleryName: props.galleryName ? props.galleryName : defaultPBlockProps.galleryName,
+        }
+
+    .p-block(class= checkProps.classes)&attributes(attributes)
+        .p-block__info
+            .p-block__title!= checkProps.title
+            .p-block__tags
+                - let tagsCount = 0;
+                - let tagsArr = checkProps.tags 
+                - while(tagsCount < tagsArr.length)
+                    .p-block__tag!= tagsArr[tagsCount]
+
+                    - tagsCount++
+            - if(checkProps.description.length > 0)
+                .p-block__desc.p-block__text!= checkProps.description
+
+            .p-block__items
+                - let itemsCount = 0;
+                - let itemsArr = checkProps.items 
+                - while(itemsCount < itemsArr.length)
+                    .p-block__item
+                        a.p-block__subtitle(href=itemsArr[itemsCount].link target="_blank")!= itemsArr[itemsCount].title
+                        .p-block__text!= itemsArr[itemsCount].desc
+
+                    - itemsCount++
+
+        - if(checkProps.galleryPreview.length > 0)
+            .p-block__gallery
+                - let imagesCount = 1;
+                - let imagesArr = checkProps.galleryImages
+                a.p-block__preview(href=imagesArr[0].media data-thumb=imagesArr[0].thumb data-fancybox=checkProps.galleryName)
+                    img(src= checkProps.galleryPreview)
+                    span.p-block__overlay
+                        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12zM7 7V5h2v2h2v2H9v2H7V9H5V7h2z" fill="#104A3A" fill-rule="evenodd"/></svg>
+                .p-block__fancylinks 
+                    - while(imagesCount < imagesArr.length)
+                        a.p-block__fancylink(href= imagesArr[imagesCount].media data-thumb=imagesArr[imagesCount].thumb data-fancybox= checkProps.galleryName)
+
+                        - imagesCount++

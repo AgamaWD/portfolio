@@ -1,0 +1,272 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+input,
+button,
+textarea,
+select {
+  font-size: inherit;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+div,
+input,
+textarea,
+select,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span {
+  outline: none;
+  font-size: inherit;
+  background: transparent;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+a {
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  white-space: normal;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+html {
+  -moz-text-size-adjust: 100%;
+  -o-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  background-color: #D7E5DC;
+  min-height: 100dvh;
+}
+
+.ak-main {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.ak-section {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 32px 0;
+}
+.ak-section__container {
+  display: flex;
+  align-items: stretch;
+  gap: 64px;
+}
+@media (max-width: 1340px) {
+  .ak-section__container {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+.ak-section__sidebar {
+  flex: 0 0 200px;
+}
+@media (max-width: 1599px) {
+  .ak-section__sidebar {
+    flex-basis: 130px;
+  }
+}
+@media (max-width: 1340px) {
+  .ak-section__sidebar {
+    flex-basis: auto;
+  }
+}
+.ak-section__sticky {
+  position: sticky;
+  top: 32px;
+}
+.ak-section__title {
+  color: #104A3A;
+  font-size: 40px;
+  font-weight: 600;
+}
+.ak-section__content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.ak-container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+@media (max-width: 1599px) {
+  .ak-container {
+    padding: 0 32px;
+  }
+}
+@media (max-width: 767px) {
+  .ak-container {
+    padding: 0 10px;
+  }
+}
+
+.my-fancybox .fancybox__viewport .fancybox__slide {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.my-fancybox .fancybox__viewport .fancybox__content {
+  max-width: 1200px;
+  max-height: 800px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.my-fancybox .f-thumbs .f-thumbs__slide {
+  width: 100px;
+  height: 67px;
+  margin: 0 10px 0 0;
+}
+.my-fancybox .f-thumbs .f-thumbs__slide__button {
+  width: 100%;
+  opacity: 1;
+}
+.my-fancybox .f-thumbs .f-thumbs__slide__button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  bottom: 0;
+  border: 2px solid #585A60;
+  border-radius: 5px;
+  animation: f-fadeIn 0.2s ease-out;
+  z-index: 10;
+}
+.my-fancybox .f-thumbs .f-thumbs__slide__img {
+  border-radius: 5px;
+}
+.my-fancybox .f-thumbs .f-thumbs__slide.is-nav-selected .f-thumbs__slide__button:after {
+  border: 2px solid white;
+  border-radius: 5px;
+}
+.my-fancybox .fancybox__toolbar .f-button[data-fancybox-close] {
+  border-radius: 50%;
+  margin-top: 40px;
+  margin-right: 40px;
+  width: 50px;
+  height: 50px;
+}
+.my-fancybox .fancybox__toolbar .f-button[data-fancybox-close] svg {
+  width: 32px;
+  height: 32px;
+  color: white;
+}
+.my-fancybox .fancybox__nav .f-button {
+  background-color: #F3F9FF;
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+.my-fancybox .fancybox__nav .f-button svg {
+  width: 24px;
+  height: 24px;
+  color: #104A3A;
+  box-shadow: none;
+  filter: none;
+}
+.my-fancybox .fancybox__nav .f-button.is-prev {
+  transform: rotate(-180deg);
+  left: 40px;
+}
+.my-fancybox .fancybox__nav .f-button.is-next {
+  right: 40px;
+}/*# sourceMappingURL=general.css.map */
