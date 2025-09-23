@@ -19,6 +19,10 @@
         gap: 0;
     }
 
+    &--highlighted {
+        opacity: 0.6;
+    }
+
     &__info {
         flex: 1 1 60%;
 

@@ -183,6 +183,7 @@ include ../components/p-block/index.pug
             })
 
             +p-block({
+                classes: 'p-block--highlighted',
                 title: 'Скоро релиз',
                 tags: [],
                 items: [
@@ -216,7 +217,7 @@ include ../components/p-block/index.pug
                     'GSAP',
                     'jQuery'
                 ],
-                description: 'Сайт компании добывающей продающей морепродукты.<br><br>Я пришёл в проект когда он уже был сделан процентов на 40. Всё остальное делал я. На большинстве страниц присутсвует анимация при скролле.',
+                description: 'Сайт компании добывающей продающей морепродукты.<br><br>Я пришёл в проект когда он уже был сделан процентов на 60. Всё остальное делал я. На большинстве страниц присутсвует анимация при скролле.',
                 items: [
                     {
                         title: 'Страница О компании',
@@ -224,8 +225,20 @@ include ../components/p-block/index.pug
                         desc: 'Эту страницу и несколько других верстал и анимировал с нуля.'
                     }
                 ],
-                galleryPreview: '',
-                galleryImages: [{}],
+                galleryPreview: 'images/projects/skyfish/about_preview.webp',
+                galleryImages: [{
+                    media: 'images/projects/skyfish/about_1.webp',
+                    thumb: 'images/projects/skyfish/about_1.webp'
+                    },
+                    {
+                        media: 'video/projects/skyfish/about.mp4',
+                        thumb: 'images/projects/skyfish/about_poster.webp'
+                    },
+                    {
+                        media: 'images/projects/skyfish/about_2.webp',
+                        thumb: 'images/projects/skyfish/about_2.webp'
+                    }
+                ],
                 galleryName: 'skyfish'
             })
 
@@ -245,8 +258,21 @@ include ../components/p-block/index.pug
                         desc: ''
                     }
                 ],
-                galleryPreview: '',
-                galleryImages: [{}],
+                galleryPreview: 'images/projects/osk/osk_preview.webp',
+                galleryImages: [
+                    {
+                        media: 'images/projects/osk/osk_1.webp',
+                        thumb: 'images/projects/osk/osk_1.webp'
+                    },
+                    {
+                        media: 'images/projects/osk/osk_2.webp',
+                        thumb: 'images/projects/osk/osk_2.webp'
+                    },
+                    {
+                        media: 'images/projects/osk/osk_3.webp',
+                        thumb: 'images/projects/osk/osk_3.webp'
+                    }
+                ],
                 galleryName: 'osk'
             })
 
@@ -334,7 +360,7 @@ include ../components/p-block/index.pug
                     'CSS',
                     'Vanilla JS',
                 ],
-                description: 'Календарь событий медиахолдинга.<br><br>Весь фронт строится из JSON. Поэтому сортировка, переключение вида и фильтры так же работают на JS. Фильтры строятся автоматически на основании параметров приходящих в JSON, что позволяет легко масштабироваться управляя данными и не копаясь в коде.',
+                description: 'Календарь событий медиахолдинга.<br><br>Весь фронт строится из JSON на чистом JavaScript. Поэтому сортировка, переключение вида и фильтры так же работают на JS. Фильтры строятся автоматически на основании параметров приходящих в JSON, что позволяет легко масштабироваться управляя данными и не копаясь в коде.',
                 items: [
                     {
                         title: 'Смотреть страницу',
@@ -342,8 +368,29 @@ include ../components/p-block/index.pug
                         desc: ''
                     },
                 ],
-                galleryPreview: '',
-                galleryImages: [{}],
+                galleryPreview: 'images/projects/events_calendar/events_calendar_preview.webp',
+                galleryImages: [
+                    {
+                        media: 'images/projects/events_calendar/events_calendar_1.webp',
+                        thumb: 'images/projects/events_calendar/events_calendar_1.webp'
+                    },
+                    {
+                        media: 'video/projects/events_calendar/events_calendar.mp4',
+                        thumb: 'images/projects/events_calendar/events_calendar_poster.webp'
+                    },
+                    {
+                        media: 'images/projects/events_calendar/events_calendar_2.webp',
+                        thumb: 'images/projects/events_calendar/events_calendar_2.webp'
+                    },
+                    {
+                        media: 'images/projects/events_calendar/events_calendar_3.webp',
+                        thumb: 'images/projects/events_calendar/events_calendar_3.webp'
+                    },
+                    {
+                        media: 'images/projects/events_calendar/events_calendar_4.webp',
+                        thumb: 'images/projects/events_calendar/events_calendar_4.webp'
+                    }
+                ],
                 galleryName: 'eventsCalendar'
             })
 
