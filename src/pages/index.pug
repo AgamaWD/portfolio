@@ -181,17 +181,42 @@ include ../components/p-block/index.pug
                 ],
                 galleryName: 'vi-interiors'
             })
+            +p-block({
+                title: 'Херсонский аграрный университет',
+                tags: [
+                    'PUG',
+                    'SCSS',
+                    'Vanilla JS',
+                    'jQuery'
+                ],
+                description: 'Сайт университета. <br><br>Вёрстка PUG + SCSS + Vanilla JS.',
+                items: [
+                    {
+                        title: 'Перейти на сайт',
+                        link: 'https://hau-edu.ru/',
+                        desc: ''
+                    }
+                ],
+                galleryPreview: 'images/projects/hau/hau_preview.webp',
+                galleryImages: [
+                    {
+                        media: 'images/projects/hau/hau_1.webp',
+                        thumb: 'images/projects/hau/hau_1.webp'
+                    },
+                    {
+                        media: 'images/projects/hau/hau_2.webp',
+                        thumb: 'images/projects/hau/hau_2.webp'
+                    },
+
+                ],
+                galleryName: 'hau'
+            })
 
             +p-block({
                 classes: 'p-block--highlighted',
                 title: 'Скоро релиз',
                 tags: [],
                 items: [
-                    {
-                        title: 'Сайт аграгного университета',
-                        link: 'javascript:void(0);',
-                        desc: 'Стек: pug, SСSS, JS, jQuery'
-                    },
                     {
                         title: 'Сайт автодиллера',
                         link: 'javascript:void(0);',
