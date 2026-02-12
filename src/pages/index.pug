@@ -7,6 +7,45 @@ include ../components/p-block/index.pug
                 .ak-section__title 2025
         .ak-section__content
             +p-block({
+                title: 'Frank auto',
+                tags: [
+                    'PUG',
+                    'SCSS',
+                    'Vanilla JS',
+                ],
+                description: 'Сайт автодиллера',
+                items: [
+                    {
+                        title: 'Главная',
+                        link: 'https://frankauto.ru/'
+                    },
+                ],
+                galleryPreview: 'images/projects/frank_auto/frank_auto_preview.webp',
+                galleryImages: [
+                    {
+                        media: 'images/projects/frank_auto/frank_auto_1.webp',
+                        thumb: 'images/projects/frank_auto/frank_auto_1.webp'
+                    },
+                    {
+                        media: 'images/projects/frank_auto/frank_auto_2.webp',
+                        thumb: 'images/projects/frank_auto/frank_auto_2.webp'
+                    },
+                    {
+                        media: 'images/projects/frank_auto/frank_auto_3.webp',
+                        thumb: 'images/projects/frank_auto/frank_auto_3.webp'
+                    },
+                    {
+                        media: 'images/projects/frank_auto/frank_auto_4.webp',
+                        thumb: 'images/projects/frank_auto/frank_auto_4.webp'
+                    },
+                    {
+                        media: 'images/projects/frank_auto/frank_auto_5.webp',
+                        thumb: 'images/projects/frank_auto/frank_auto_5.webp'
+                    },
+                ],
+                galleryName: 'frankAuto'
+            })
+            +p-block({
                 title: 'Завод Точприбор',
                 tags: [
                     'PUG',
@@ -218,15 +257,21 @@ include ../components/p-block/index.pug
                 tags: [],
                 items: [
                     {
-                        title: 'Сайт автодиллера',
-                        link: 'javascript:void(0);',
-                        desc: 'Стек: PUG, SСSS, JS, jQuery'
-                    },
-                    {
                         title: 'Сайт агрохолдинга',
                         link: 'javascript:void(0);',
-                        desc: 'Стек: PUG, SСSS, JS, jQuery'
-                    }
+                        desc: 'Стек: PUG, SСSS, JS'
+                    },
+                    {
+                        title: 'Сайт мебельных фасадов',
+                        link: 'javascript:void(0);',
+                        desc: 'Стек: PUG, SСSS, JS, GSAP'
+                    },
+                    {
+                        title: 'Сайт производствееного оборудования',
+                        link: 'javascript:void(0);',
+                        desc: 'Стек: PUG, SСSS, JS'
+                    },
+
                 ],
                 galleryPreview: '',
                 galleryImages: [{}],
