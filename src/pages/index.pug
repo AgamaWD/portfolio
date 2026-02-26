@@ -4,6 +4,47 @@ include ../components/p-block/index.pug
     .ak-container.ak-section__container
         .ak-section__sidebar
             .ak-section__sticky
+                .ak-section__title 2026
+        .ak-section__content
+            +p-block({
+                title: 'Planets',
+                tags: [
+                    'PUG',
+                    'SCSS',
+                    'TypeScript',
+                ],
+                description: 'Pet-проект направленый на работу с TypeScript',
+                items: [
+                    {
+                        title: 'Смотреть сайт',
+                        link: 'https://agamawd.github.io/planets/dist/'
+                    },
+                    {
+                        title: 'Смотреть код',
+                        link: 'https://github.com/AgamaWD/planets'
+                    },
+                ],
+                galleryPreview: 'images/projects/planets/planets_preview.webp',
+                galleryImages: [
+                    {
+                        media: 'images/projects/planets/planets_1.webp',
+                        thumb: 'images/projects/planets/planets_1.webp'
+                    },
+                    {
+                        media: 'images/projects/planets/planets_2.webp',
+                        thumb: 'images/projects/planets/planets_2.webp'
+                    },
+                    {
+                        media: 'video/projects/planets/planets_video.mp4',
+                        thumb: 'images/projects/planets/planets_1.webp'
+                    }
+                ],
+                galleryName: 'planets'
+            })
+
+    .ak-container.ak-section__container
+        .ak-section__sidebar
+            .ak-section__sticky
                 .ak-section__title 2025
         .ak-section__content
             +p-block({
