@@ -45,6 +45,36 @@
         }
     }
 
+    &__stickers {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: -15px;
+        margin-left: -15px;
+        margin-bottom: 10px;
+    }
+
+    &__sticker {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background-color: $c-accent;
+        padding: 3px 8px 3px 4px;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: 700;
+
+        img {
+            width: 16px;
+            height: 16px;
+            opacity: 0.5;
+        }
+
+        span {
+            opacity: 0.5;
+        }
+    }
+
     &__tags {
         display: -webkit-box;
         display: flex;

@@ -2,6 +2,7 @@
     const defaultPBlockProps = {
         classes: '',
         title: '',
+        stickers: [],
         tags: [],
         description: '',
         items: {},
@@ -15,6 +16,7 @@ mixin p-block(props = defaultImagesGridProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultPBlockProps.classes,
             title: props.title ? props.title : defaultPBlockProps.title,
+            stickers: props.stickers ? props.stickers : defaultPBlockProps.stickers,
             tags: props.tags ? props.tags : defaultPBlockProps.tags,
             description: props.description ? props.description : defaultPBlockProps.description,
             items: props.items ? props.items : defaultPBlockProps.items,
@@ -25,6 +27,20 @@ mixin p-block(props = defaultImagesGridProps)
 
     .p-block(class= checkProps.classes)&attributes(attributes)
         .p-block__info
+            - if(checkProps.stickers && checkProps.stickers.length > 0)
+                .p-block__stickers
+                    - let stickersCount = 0;
+                    - let stickersArr = checkProps.stickers 
+                    - while(stickersCount < stickersArr.length)
+                        -let stickerImg = 'images/stickers/' + stickersArr[stickersCount] + '.png'
+                        -let stickerText = stickersArr[stickersCount] === 'pet' ? 'pet-проект' : stickersArr[stickersCount] === 'prod' ? 'prod-проект' : stickersArr[stickersCount] === 'best' ? 'рекомендую' : ''
+
+                        .p-block__sticker
+                            img(src=stickerImg, alt=stickerText)
+                            span!= stickerText
+
+                        - stickersCount++
+
             h2.p-block__title!= checkProps.title
             .p-block__tags
                 - let tagsCount = 0;
